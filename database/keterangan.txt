@@ -1,0 +1,5 @@
+untuk kode_event pas nginput dibuat selection option
+dengan( event 1 - event 6)
+untuk kode_berita dibuat selection option
+(berita 1 - berita 6)
+untuk beasiswa , beasiswa selection option (beasiswa 1)

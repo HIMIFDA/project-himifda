@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,59 +22,57 @@
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg  fixed-top" style="background-color: #1e90ff;">
+    <nav class="navbar fixed-top navbar-expand-lg  fixed-top" style="background-color: #003366;">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="images/4.png" width="25px" height="25px"><font color= "white"> <b> HIMIFDA </b></font></a>
+        <a class="navbar-brand" href="index.php"><img src="images/4.png" width="30px" height="30px"><font color= "white"> <b> HIMIFDA </b></font></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" style="background-color: white;"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive" >
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#"><font color= "white"> <b>Beranda</b></font></a>
+              <a class="nav-link" href="index.php"><font color= "white"> <b>Home</b></font></a>
             </li>
            
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
                <font color= "white"> <b>Profile</b></font>
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="#">Sejarah</a>
-                <a class="dropdown-item" href="#">Visi&Misi</a>
-                <a class="dropdown-item" href="#">Pengurus</a>
-                 <a class="dropdown-item" href="#">Struktural</a>
-                  <a class="dropdown-item" href="#">Prestasi</a>
+                               <a class="dropdown-item" href="pages/pages.php?halaman=visimisi">Visi & Misi</a>
                
+                 <a class="dropdown-item" href="pages/pages.php?halaman=struktural">Struktural</a>
+                 <a class="dropdown-item" href="pages/pages.php?halaman=galery">Galery</a>
+                 
               </div>
             </li>
 
              <li class="nav-item">
-              <a class="nav-link" href="about.html"><font color= "white"> <b>Event</b></font></a>
+              <a class="nav-link" href="pages/pages.php?halaman=event"><font color= "white"> <b>Event</b></font></a>
             </li>
             
               <li class="nav-item dropdown" >
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-              <font color= "white"> <b> Akademik</b></font>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              <font color= "white"> <b> Academic</b></font>
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="portfolio-1-col.html">Mata Kuliah Informatika</a>
-                <a class="dropdown-item" href="portfolio-2-col.html">Kalender AKademik</a>
-                <a class="dropdown-item" href="portfolio-3-col.html">Info Beasiswa</a>
-                 <a class="dropdown-item" href="portfolio-3-col.html">Portal Unsada</a>
-                  <a class="dropdown-item" href="portfolio-3-col.html">Tutorial</a>
+                <a class="dropdown-item" href="pages/pages.php?halaman=matkul">Mata Kuliah Informatika</a>
+                <a class="dropdown-item" href="pages/pages.php?halaman=kalender">Kalender AKademik</a>
+                <a class="dropdown-item" href="pages/pages.php?halaman=beasiswa">Info Beasiswa</a>
+                  <a class="dropdown-item" href="http://portal.unsada.ac.id/gate/index.php">Portal Unsada</a>
+                  <a class="dropdown-item" href="https://www.youtube.com/channel/UCfaMHmPmMF0HHsbqsWJdH7Q">Channel Youtube</a>
+                   <a class="dropdown-item" href="pages/pages.php?halaman=modul">Download Modul Materi</a>
                
                
               </div>
             </li>
            
              
-             <li class="nav-item">
-              <a class="nav-link" href="about.html"><font color= "white"> <b>FAQ</b></font></a>
+              <li class="nav-item">
+              <a class="nav-link" href="pages/pages.php?halaman=faq"><font color= "white"> <b>FAQ</b></font></a>
             </li>
 
-             <li class="nav-item">
-              <a class="nav-link" href="about.html"><font color= "white"> <b>Contact</b></font></a>
-            </li>
+            
            
           </ul>
         </div>
@@ -125,42 +124,105 @@
 
     <!-- Page Content -->
     <div class="container"><br>
-    
-
+       
+   
       <h3 class="my-4"><center><b>Himpunan Informatika Universitas Darma Persada</b></center></h3><hr />
 
       <!-- Marketing Icons Section -->
       <div class="row">
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Berita Himifda</h4>
+            <h4 class="card-header"></h4>
             <div class="card-body">
-              <p class="card-text">Himifda Singkatan dari Universitas Darma Persada yang terletak di Fakultas Teknik Lt.4 . </p>
+              <p class="card-text">
+               <?php
+
+            include 'config/koneksi.php';
+           $query = mysqli_query($konek, "SELECT id,kode_berita,judul,foto,read_more FROM berita where kode_berita='berita 1'")or die(mysqli_error($konek));
+
+            $no = 1;        
+                      while($data = mysqli_fetch_array($query)){  
+        
+        
+           
+          
+         
+            echo ' <img src='.$data['foto'].' alt="Lights" style="width:100%">';
+           echo '<h5><b>'.$data['judul'].'</h5></b>';
+           echo ''.$data['read_more'].'<br><br>';
+          
+          
+           
+}
+        ?> </p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="pages/pages.php?halaman=berita1" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Acara Hifasco</h4>
+            <h4 class="card-header"></h4>
             <div class="card-body">
-              <p class="card-text">Hifasco singkatan dari Himifda Seminar and Competition</p>
+              <p class="card-text">
+                
+                 <?php
+
+            include 'config/koneksi.php';
+           $query = mysqli_query($konek, "SELECT id,kode_berita,judul,foto,read_more FROM berita where kode_berita='berita 2'")or die(mysqli_error($konek));
+
+            $no = 1;        
+                      while($data = mysqli_fetch_array($query)){  
+        
+        
+           
+          
+         
+            echo ' <img src='.$data['foto'].' alt="Lights" style="width:100%">';
+           echo '<h5><b>'.$data['judul'].'</h5></b>';
+           echo ''.$data['read_more'].'<br><br>';
+          
+          
+           
+}
+        ?>
+              </p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="pages/pages.php?halaman=berita2" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Berita Himifda</h4>
+            <h4 class="card-header"></h4>
             <div class="card-body">
-              <p class="card-text">Himifda Singkatan dari Universitas Darma Persada yang terletak di Fakultas Teknik Lt.4 .</p>
+              <p class="card-text">
+                 <?php
+
+            include 'config/koneksi.php';
+           $query = mysqli_query($konek, "SELECT id,kode_berita,judul,foto,read_more FROM berita where kode_berita='berita 3'")or die(mysqli_error($konek));
+
+            $no = 1;        
+                      while($data = mysqli_fetch_array($query)){  
+        
+        
+           
+          
+         
+            echo ' <img src='.$data['foto'].' alt="Lights" style="width:100%">';
+           echo '<h5><b>'.$data['judul'].'</h5></b>';
+           echo ''.$data['read_more'].'<br><br>';
+          
+          
+           
+}
+        ?>
+              </p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="pages/pages.php?halaman=berita3" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
@@ -169,38 +231,122 @@
  <div class="row">
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Berita Himifda</h4>
+            <h4 class="card-header"></h4>
             <div class="card-body">
-              <p class="card-text">Himifda Singkatan dari Universitas Darma Persada yang terletak di Fakultas Teknik Lt.4 . </p>
+              <p class="card-text">
+               <?php
+
+            include 'config/koneksi.php';
+           $query = mysqli_query($konek, "SELECT id,kode_berita,judul,foto,read_more FROM berita where kode_berita='berita 4'")or die(mysqli_error($konek));
+
+            $no = 1;        
+                      while($data = mysqli_fetch_array($query)){  
+        
+        
+           
+          
+         
+            echo ' <img src='.$data['foto'].' alt="Lights" style="width:100%">';
+           echo '<h5><b>'.$data['judul'].'</h5></b>';
+           echo ''.$data['read_more'].'<br><br>';
+          
+          
+           
+}
+        ?> </p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="pages/pages.php?halaman=berita4" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Acara Hifasco</h4>
+            <h4 class="card-header"></h4>
             <div class="card-body">
-              <p class="card-text">Hifasco singkatan dari Himifda Seminar and Competition</p>
+              <p class="card-text">
+                 <?php
+
+            include 'config/koneksi.php';
+           $query = mysqli_query($konek, "SELECT id,kode_berita,judul,foto,read_more FROM berita where kode_berita='berita 5'")or die(mysqli_error($konek));
+
+            $no = 1;        
+                      while($data = mysqli_fetch_array($query)){  
+        
+        
+           
+          
+         
+            echo ' <img src='.$data['foto'].' alt="Lights" style="width:100%">';
+           echo '<h5><b>'.$data['judul'].'</h5></b>';
+           echo ''.$data['read_more'].'<br><br>';
+          
+          
+           
+}
+        ?>
+              </p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="pages/pages.php?halaman=berita5" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Berita Himifda</h4>
+            <h4 class="card-header"></h4>
             <div class="card-body">
-              <p class="card-text">Himifda Singkatan dari Universitas Darma Persada yang terletak di Fakultas Teknik Lt.4 .</p>
+              <p class="card-text">
+                 <?php
+
+            include 'config/koneksi.php';
+           $query = mysqli_query($konek, "SELECT id,kode_berita,judul,foto,read_more FROM berita where kode_berita='berita 6'")or die(mysqli_error($konek));
+
+            $no = 1;        
+                      while($data = mysqli_fetch_array($query)){  
+        
+        
+           
+          
+         
+            echo ' <img src='.$data['foto'].' alt="Lights" style="width:100%">';
+           echo '<h5><b>'.$data['judul'].'</h5></b>';
+           echo ''.$data['read_more'].'<br><br>';
+          
+          
+           
+}
+        ?>
+              </p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="pages/pages.php?halaman=berita6" class="btn btn-primary">Read More</a>
             </div>
+
+
+
+
           </div>
+
+
+
         </div>
-      </div>      <!-- /.row -->
+        
+      </div> 
+
+          
+      
+
+
+        </div>   
+
+
+
+                                   
+
+            </div>
+        </div>
+    <!-- /.row -->
 
       <!-- Portfolio Section -->
      
@@ -211,7 +357,7 @@
         <div class="col-lg-6">
          
          
-          
+        
         </div>
         <div class="col-lg-6">
          
@@ -222,25 +368,79 @@
       <hr>
 
       <!-- Call to Action Section -->
-      <div class="row mb-4">
-        <div class="col-md-8">
-         
-        </div>
-        <div class="col-md-4">
-         
-        </div>
-      </div>
+     
 
     </div>
+
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5" style="background-color: #003366;"><br><br>
+       <p class="m-0 text-center text-white"><b>&copy; Copyright 2018 | Himpunan Mahasiswa Informatika Unsada </b></p><br><br>
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; HIMIFDA 2018</p>
+          <div class="row">
+
+       
+     
+
+      <div class="col m4 s12">
+            <h5 class="white-text"><font color="white">HIMIFDA</font></h5>
+            <p ><font color="white">Gedung Fakultas Teknik Lt. IV,Universitas Darma Persada <br/> Jl.Malaka Pondok Kelapa<br /> Jakarta Timur </font></p>
+          </div>
+ <div class="col m4 s12">
+            <h5 class="white-text"><b><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Media Social</font></b></h5>
+            <button type="button" class="btn btn-info"><a href="https://www.facebook.com/himifda.unsada/"><font color="white">Facebook</font></a></button>
+            <button type="button" class="btn btn-warning"><a href="https://www.instagram.com/himifda/?hl=id"><font color="white">Instagram</font></a></button>
+            <button type="button" class="btn btn-danger"><a href="https://twitter.com/himifda08"><font color="white">Twitter</font></a></button><br><br>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-success">Email : himifda08@gmail.com</button>
+
+          </div>
+          <div class="col m4 s12">
+            <h5 class="white-text"><font color="white"><b>Contact HIMIFDA</b></font></h5>
+              <a class="grey-text text-lighten-3"><font color="white">Nadia Salsabil&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 087876024094</font></a></br>
+              <a class="grey-text text-lighten-3"><font color="white">Erma Noviana&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 083893936774</font></a></br>
+                <a class="grey-text text-lighten-3"> <font color="white">Riki Bagastoro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 081219845389</font></a></br>
+          </div>
+
+
+
+        </div><br>
+
+          <div class="card">
+ 
+  <div class="card-body">
+    
+      <form action="config/simpan-kritiksaran.php" method="post">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+
+    
+
+   <div class="form-group">
+  <label for="comment">Critics:</label>
+  <textarea class="form-control" rows="2" id="kritik" name="kritik" placeholder="Enter Critics"></textarea>
+</div>
+
+   <div class="form-group">
+  <label for="comment">Sugestion:</label>
+  <textarea class="form-control" rows="2" id="saran" name="saran" placeholder="Enter Sugestion"></textarea>
+</div>  
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div> 
+ 
+</div>
       </div>
+
+
+     
+
       <!-- /.container -->
     </footer>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
