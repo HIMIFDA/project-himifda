@@ -1,7 +1,7 @@
  
  
 <div class="jumbotron" style="background-color: #ccd9ff;">
-<h3><center><img src="../images/4.png" width="100px" height="100px"><br>EVENT / KEGIATAN HIMPUNAN MAHASISWA INFORMATIKA <br> UNIVERSITAS DARMA PERSADA </center></h3>
+<h3><center><img src="../images/4.png" width="100px" height="100px"><br>EVENTS OF HIMIFDA</center></h3>
  </div>
 
 

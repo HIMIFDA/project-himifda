@@ -2,17 +2,16 @@
  
 <div class="jumbotron" style="background-color: #ccd9ff;">
 <h3><center><img src="../images/4.png" width="100px" height="100px">
-  <br>FREQUENTLY ANSWER & QUESTION <br> HIMPUNAN MAHASISWA INFORMATIKA UNIVERSITAS DARMA PERSADA </h3></center>
+  <br>FREQUENTLY ANSWER & QUESTION <br> HIMIFDA</h3></center>
  </div>
 
  <div class="container" >
 </div>
 
 <div class="card">
-  <div class="card-header" style="background-color: #99bbff; "><b>FAQ</b> <font color="white"> Himpunan Mahasiswa Informatika Unsada</font></div>
+  <div class="card-header" style="background-color: #99bbff; "><b>FAQ</b></div>
   <div class="card-body">
-  <br><br>
-
+  <br>
 
    <table class="table table-striped">
     <thead>

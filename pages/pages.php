@@ -52,17 +52,16 @@
                
 
                
-                <a class="dropdown-item" href="pages.php?halaman=visimisi">Visi & Misi</a>
+                <a class="dropdown-item" href="pages.php?halaman=visimisi">Vision & Mission</a>
              
-                 <a class="dropdown-item" href="pages.php?halaman=struktural">Struktural</a>
-                  <a class="dropdown-item" href="pages.php?halaman=galery">Galery</a>
+                 <a class="dropdown-item" href="pages.php?halaman=struktural">Structure Organization</a>
                  
                
               </div>
             </li>
 
              <li class="nav-item">
-              <a class="nav-link" href="pages.php?halaman=event"><font color= "white"> <b>Event</b></font></a>
+              <a class="nav-link" href="pages.php?halaman=event"><font color= "white"> <b>Events</b></font></a>
             </li>
             
               <li class="nav-item dropdown" >
@@ -70,12 +69,10 @@
               <font color= "white"> <b> Academic</b></font>
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="pages.php?halaman=matkul">Mata Kuliah Informatika</a>
-                <a class="dropdown-item" href="pages.php?halaman=kalender">Kalender AKademik</a>
-                <a class="dropdown-item" href="pages.php?halaman=beasiswa">Info Beasiswa</a>
-                 <a class="dropdown-item" href="http://portal.unsada.ac.id/gate/index.php">Portal Unsada</a>
-                  <a class="dropdown-item" href="https://www.youtube.com/channel/UCfaMHmPmMF0HHsbqsWJdH7Q">Channel Youtube</a>
-                   <a class="dropdown-item" href="pages.php?halaman=modul">Download Modul Materi</a>
+                <a class="dropdown-item" href="pages.php?halaman=beasiswa">Scholarship Info</a>
+                  <a class="dropdown-item" target="_blank" href="http://portal.unsada.ac.id/gate/index.php">Portal</a>
+                  
+                   <a class="dropdown-item" href="pages.php?halaman=modul">Download Moduls</a>
                
                
               </div>
