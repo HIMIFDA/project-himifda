@@ -15,11 +15,11 @@
   th {
       background-color: #3bacd6;
       color: white;
-      font-size: 9px;
+      font-size: 12px;
   }
 
   td {
-    font-size: 9px;
+    font-size: 12px;
   }
 
 </style>
@@ -52,15 +52,8 @@
           <th>No</th>
           <th>NIM</th>
           <th>Nama</th>
-          <th>Nama Panggilan</th>
           <th>Angkatan</th>
-          <th>Jenis Kelamin</th>
-          <th>Alamat</th>
           <th>No. HP</th>
-          <th>Email</th>
-          <th>Tempat Lahir</th>
-          <th>Tanggal Lahir</th>
-          <th>Agama</th>
           <th>Jabatan</th>
           <th colspan="2"><center>Action</center></th>
         </tr>
@@ -81,7 +74,7 @@
               $posisi = ($hal - 1) * $batas;
             }
             if($_SERVER['REQUEST_METHOD'] == "POST") {
-              $pencarian = trim(mysqli_real_escape_string($konek, $_POST['pencarian']));
+              $pencarian = trim(mysqli_real_escape_string($connect, $_POST['pencarian']));
               if ($pencarian != '') {
                 $sql = "SELECT id, nim, nama, nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama, jabatan FROM anggota_resmi WHERE nim LIKE '%$pencarian%' OR nama LIKE '%$pencarian%' OR nama_panggilan LIKE '%$pencarian%' OR angkatan LIKE '%$pencarian%' OR jk LIKE '%$pencarian%' OR alamat LIKE '%$pencarian%' OR no_hp LIKE '%$pencarian%' OR email LIKE '%$pencarian%' OR jabatan LIKE '%$pencarian%' ORDER BY id DESC";
                 $query = $sql;
@@ -110,15 +103,8 @@
                          echo '<td>'.$no.'</td>';
                                                 echo '<td>'.$data['nim'].'</td>';
                                                 echo '<td>'.$data['nama'].'</td>';
-                                                echo '<td>'.$data['nama_panggilan'].'</td>';
                                                 echo '<td>'.$data['angkatan'].'</td>';
-                                                echo '<td>'.$data['jk'].'</td>';
-                                                echo '<td>'.$data['alamat'].'</td>';
                                                 echo '<td>'.$data['no_hp'].'</td>';
-                                                echo '<td>'.$data['email'].'</td>';
-                                                echo '<td>'.$data['tempat_lahir'].'</td>';
-                                                echo '<td>'.$data['tgl_lahir'].'</td>';
-                                                echo '<td>'.$data['agama'].'</td>';
                                                 echo '<td>'.$data['jabatan'].'</td>';
                                                 echo '<td><a href=index.php?halaman=edit&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
                                                 echo '<td><a href=config/hapus_anggota.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';

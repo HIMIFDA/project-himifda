@@ -86,10 +86,8 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('images/1.jpg')">
+          <div class="carousel-item active" style="background-image: url('images/log.png')">
             <div class="carousel-caption d-none d-md-block">
-              <h3> HIMIFDA </h3>
-              <p>Himpunan Mahasiswa Informatika Universitas Darma Persada</p>
             </div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
