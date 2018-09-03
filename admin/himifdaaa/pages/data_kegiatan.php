@@ -145,7 +145,7 @@
             $jml_hal = ceil($jml / $batas);
             for ($i=1; $i <= $jml_hal; $i++) {
               if ($i != $hal) {
-                echo "<li><a href=\"index.php?halaman=data_anggota&&hal=$i\">$i</a></li>";
+                echo "<li><a href=\"index.php?halaman=data_kegiatan&&hal=$i\">$i</a></li>";
               } else {
                 echo "<li class=\"active\"><a>$i</a></li>";
               }

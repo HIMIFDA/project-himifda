@@ -35,7 +35,7 @@
 </div>
    
 <div class="col-md-12" style="min-height:500px">
-  <h3><b>Alumni</b></h3>
+  <h3><b>Data Alumni</b></h3>
   <hr>
      <form class="form-inline" action="" method="POST">
     <div class="form-group" style="float: right;">
@@ -153,7 +153,7 @@
             $jml_hal = ceil($jml / $batas);
             for ($i=1; $i <= $jml_hal; $i++) {
               if ($i != $hal) {
-                echo "<li><a href=\"index.php?halaman=data_anggota&&hal=$i\">$i</a></li>";
+                echo "<li><a href=\"index.php?halaman=data_alumni&&hal=$i\">$i</a></li>";
               } else {
                 echo "<li class=\"active\"><a>$i</a></li>";
               }

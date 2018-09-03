@@ -304,7 +304,7 @@
                             <a href="index.php?halaman=data_alumni"><i></i> Alumni </a>
                         </li>
                         <li>
-                            <a href="index.php?halaman=data_ip"><i></i> IPK </a>
+                            <a href="index.php?halaman=data_ip"><i></i> Indeks Prestasi </a>
                         </li>
                         <!-- <li>
                             <a href="index.php?halaman=data_kalender_akademik"><i></i> Kalender Akademik </a>
