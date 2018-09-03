@@ -2,6 +2,10 @@
     
     session_start();
 
+    if (isset($_SESSION['username']))
+
+    {
+
     if(isset($_GET['halaman'])) $halaman = $_GET['halaman']; 
         else $halaman = "index";
 
@@ -503,3 +507,10 @@
 </body>
 
 </html>
+<?php
+}
+else
+  {
+    header("location:../index.php");
+  }
+?>
