@@ -207,6 +207,8 @@
                             include 'edit_berita.php';
                         elseif ($halaman=='edit_info_beasiswa')
                             include 'edit_info_beasiswa.php';
+                        elseif ($halaman=='edit_struktur')
+                            include 'edit_struktur.php';
 
                                        
                      ?>

@@ -46,7 +46,7 @@
         <th>Deskripsi</th>
         <th>Tanggal Upload</th>
 
-        <th colspan="2">Action</th>
+        <th>Action</th>
       </tr>
         </thead>
         <tbody>
@@ -71,7 +71,7 @@
                                                
                                                 
                                                 echo '<td><a href=index.php?halaman=edit_struktur&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
-                                                echo '<td><a href=config/hapus_struktur.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';
+                                                /*echo '<td><a href=config/hapus_struktur.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';*/
                                                 echo '</tr>';
                         $no++;  
                       }
