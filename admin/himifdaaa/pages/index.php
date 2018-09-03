@@ -68,7 +68,7 @@
                         <center><img width="200" src="../../../images/logo.png"></center>
                         <br>
                         <li>
-                            <a href="index.php?halaman=index"><i></i>Dashboard (udah)</a>
+                            <a href="index.php?halaman=index"><i></i>Dashboard</a>
                         </li>
                         <li>
                            
@@ -76,7 +76,7 @@
                             <a href="index.php?halaman=data_anggota"><i></i> Anggota Resmi</a>
                         </li>
                         <li>
-                            <a href="index.php?halaman=data_visimisi"><i></i> Visi Misi (udah)</a>
+                            <a href="index.php?halaman=data_visimisi"><i></i> Visi Misi</a>
                         </li>
                         <li>
                             <a href="index.php?halaman=data_struktur"><i></i> Struktural </a>
@@ -118,7 +118,7 @@
                             <a href="index.php?halaman=data_info_beasiswa"><i></i> Info Beasiswa </a>
                         </li>
                         <li>
-                            <a href="logout.php"><i></i> Logout (udah) </a>
+                            <a href="logout.php"><i></i> Logout </a>
                         </li>
                        
                             </ul>
