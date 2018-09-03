@@ -14,17 +14,17 @@
   <?php
 
             include '../config/koneksi.php';
- $query = mysqli_query($konek, "SELECT id,beasiswa,info_beasiswa,tgl,penyelenggara,file,deskripsi FROM info_beasiswa where beasiswa='beasiswa 1'")or die(mysqli_error($konek));
+ $query = mysqli_query($konek, "SELECT id,beasiswa,info_beasiswa,tgl,penyelenggara,file,deskripsi FROM info_beasiswa ORDER BY id DESC")or die(mysqli_error($konek));
 
   $no = 1;        
                       while($data = mysqli_fetch_array($query)){  
         
          echo ''.$data['tgl'].'<br>';
-         echo ' penyelenggara :&nbsp;'.$data['penyelenggara'].'<br><br>';
+         echo ' penyelenggara :&nbsp;'.$data['penyelenggara'].'<br>';
           
-          echo '<b><center><h3>'.$data['info_beasiswa'].'</b></center></h3><br><br>'; 
-          echo '<center><img src ='.$data['file'].'</center><br><br>';
-           echo ''.$data['deskripsi'].'<br><br>';
+          echo '<b><h3>'.$data['info_beasiswa'].'</b></h3>'; 
+          echo '<img height="150" width="100" src ='.$data['file'].'<br>';
+           echo '<p align="justify">'.$data['deskripsi'].'</p><hr>';
           
           
            

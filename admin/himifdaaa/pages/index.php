@@ -17,7 +17,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>HIMIFDA</title>
+    <title>Admin Himifda</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -264,7 +264,7 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="index.php"><i></i>Dashboard</a>
+                            <a href="index.php?halaman=index"><i></i>Dashboard</a>
                         </li>
                         <li>
                             <!-- <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
@@ -405,7 +405,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <br>
-                        <p align="center"><i>Selamat datang di Dashboard Admin HIMIFDA</i></p>
+                        <!-- <p align="center"><i>Selamat datang di Dashboard Admin HIMIFDA</i></p> -->
                         <!-- <h1 class="page-header">Blank</h1> -->
                         <?php
 
@@ -413,6 +413,8 @@
                             include 'input_anggota.php';
                         elseif ($halaman=='input_alumni')
                             include 'input_alumni.php';
+                        elseif ($halaman=='index')
+                            include 'dashboard.php';
                         elseif ($halaman=='input_faq')
                             include 'input_faq.php';
                         elseif ($halaman=='input_ip')

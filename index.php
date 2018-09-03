@@ -122,9 +122,10 @@
     <div class="container"><br>
        
    
-      <h3 class="my-4"><center><b>Himpunan Mahasiswa Informatika Universitas Darma Persada</b></center></h3><hr />
+     <!--  <h3 class="my-4"><center><b>Himpunan Mahasiswa Informatika Universitas Darma Persada</b></center></h3><hr /> -->
 
       <!-- Marketing Icons Section -->
+      <hr>
       <div class="row">
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
@@ -224,105 +225,7 @@
         </div>
       </div>
 
- <div class="row">
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-            <h4 class="card-header"></h4>
-            <div class="card-body">
-              <p class="card-text">
-               <?php
-
-            include 'config/koneksi.php';
-           $query = mysqli_query($konek, "SELECT id,kode_berita,judul,foto,read_more FROM berita where kode_berita='berita 4'")or die(mysqli_error($konek));
-
-            $no = 1;        
-                      while($data = mysqli_fetch_array($query)){  
-        
-        
-           
-          
-         
-            echo ' <img src='.$data['foto'].' alt="Lights" style="width:100%">';
-           echo '<h5><b>'.$data['judul'].'</h5></b>';
-           echo ''.$data['read_more'].'<br><br>';
-          
-          
-           
-}
-        ?> </p>
-            </div>
-            <div class="card-footer">
-              <a href="pages/pages.php?halaman=berita4" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-            <h4 class="card-header"></h4>
-            <div class="card-body">
-              <p class="card-text">
-                 <?php
-
-            include 'config/koneksi.php';
-           $query = mysqli_query($konek, "SELECT id,kode_berita,judul,foto,read_more FROM berita where kode_berita='berita 5'")or die(mysqli_error($konek));
-
-            $no = 1;        
-                      while($data = mysqli_fetch_array($query)){  
-        
-        
-           
-          
-         
-            echo ' <img src='.$data['foto'].' alt="Lights" style="width:100%">';
-           echo '<h5><b>'.$data['judul'].'</h5></b>';
-           echo ''.$data['read_more'].'<br><br>';
-          
-          
-           
-}
-        ?>
-              </p>
-            </div>
-            <div class="card-footer">
-              <a href="pages/pages.php?halaman=berita5" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-            <h4 class="card-header"></h4>
-            <div class="card-body">
-              <p class="card-text">
-                 <?php
-
-            include 'config/koneksi.php';
-           $query = mysqli_query($konek, "SELECT id,kode_berita,judul,foto,read_more FROM berita where kode_berita='berita 6'")or die(mysqli_error($konek));
-
-            $no = 1;        
-                      while($data = mysqli_fetch_array($query)){  
-        
-        
-           
-          
-         
-            echo ' <img src='.$data['foto'].' alt="Lights" style="width:100%">';
-           echo '<h5><b>'.$data['judul'].'</h5></b>';
-           echo ''.$data['read_more'].'<br><br>';
-          
-          
-           
-}
-        ?>
-              </p>
-            </div>
-            <div class="card-footer">
-              <a href="pages/pages.php?halaman=berita6" class="btn btn-primary">Read More</a>
-            </div>
-
-
-
-
-          </div>
+ 
 
 
 
@@ -421,8 +324,8 @@
 </div>
 
    <div class="form-group">
-  <label for="comment">Sugestion:</label>
-  <textarea class="form-control" rows="2" name="saran" placeholder="Enter Sugestion" required></textarea>
+  <label for="comment">Suggestion:</label>
+  <textarea class="form-control" rows="2" name="saran" placeholder="Enter Suggestion" required></textarea>
 </div>  
    
     <button type="submit" class="btn btn-primary">Submit</button>
@@ -434,7 +337,7 @@
 </div>
       </div>
       <br>
-<p class="m-0 text-center text-white"><b>&copy; Copyright 2018 | Himpunan Mahasiswa Informatika Unsada </b></p><br><br>
+<p class="m-0 text-center text-white"><b>&copy; Copyright 2018 | Himpunan Mahasiswa Informatika Unsada </b></p>
 
      
 
