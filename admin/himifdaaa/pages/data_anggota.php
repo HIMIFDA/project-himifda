@@ -80,7 +80,7 @@
                 $query = $sql;
                 $queryJml = $sql;
               } else {
-                $query = "SELECT id, nim, nama, nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama, jabatan FROM anggota_resmi ORDER BY id DESC LIMIT $posisi, $batas ";
+                $query = "SELECT id, nim, nama, nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama, jabatan FROM anggota_resmi ORDER BY nim ASC LIMIT $posisi, $batas ";
                 $queryJml = "SELECT id, nim, nama, nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama, jabatan FROM anggota_resmi ORDER BY nim ASC";
                 $no = $posisi + 1;
               }
