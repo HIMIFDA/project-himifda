@@ -42,7 +42,7 @@
       <a href="index.php?halaman=data_anggota"><button type="button" class="btn btn-warning"><i class="fa fa-refresh fa-fw"></i></button></a>
     </div>
   </form>
-  <a href=""><button type="button" class="btn btn-primary"><i class="fa fa-plus-circle fa-fw"></i>Tambah Anggota</button></a>
+  <a href="index.php?halaman=input_anggota"><button type="button" class="btn btn-primary"><i class="fa fa-plus-circle fa-fw"></i>Tambah Anggota</button></a>
   <br>
   <br>
   <form class="form-horizontal" method="POST">
@@ -55,7 +55,7 @@
           <th>Angkatan</th>
           <th>No.HP</th>
           <th>Jabatan</th>
-          <th colspan="2"><center>Action</center></th>
+          <th colspan="3"><center>Action</center></th>
         </tr>
       </thead>
       <tbody>
@@ -106,8 +106,12 @@
                                                 echo '<td>'.$data['angkatan'].'</td>';
                                                 echo '<td>'.$data['no_hp'].'</td>';
                                                 echo '<td>'.$data['jabatan'].'</td>';
-                                                echo '<td><a href=index.php?halaman=edit&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
-                                                echo '<td><a href=config/hapus_anggota.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';
+                                                echo '<td>
+                                                        <a href=index.php?halaman=read_anggota&&id='.$data['id'].'><span class="glyphicon glyphicon-zoom-in">
+                                                        </a>
+                                                        <a href=index.php?halaman=edit_anggota&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a>
+                                                        <a href=config/hapus_anggota.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a>
+                                                      </td>';
                                                 echo '</tr>';
                         $no++;  
                       }
