@@ -65,12 +65,12 @@
                       while($data = mysqli_fetch_array($query)){  
                         echo '<tr>';
                                                 echo '<td>'.$no.'</td>';
-                                                echo '<td><img src='.$data['nama_file'].'></td>';
+                                                echo '<td>'.$data['nama_file'].'</td>';
                                                 echo '<td>'.$data['deskripsi'].'</td>';
                                                 echo '<td>'.$data['tgl_upload'].'</td>';
                                                
                                                 
-                                                echo '<td><a href=index.php?halaman=edit_visimisi&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
+                                                echo '<td><a href=index.php?halaman=edit_struktur&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
                                                 echo '<td><a href=config/hapus_struktur.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';
                                                 echo '</tr>';
                         $no++;  
