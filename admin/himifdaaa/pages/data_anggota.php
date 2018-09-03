@@ -28,7 +28,7 @@
 
 <div class="col-md-12" style="padding:0px">
     <ol class="breadcrumb" style="margin:0;border-radius:0;">
-      <li class="active"><a href="index.php">Dashboard</a> / Anggota Resmi</li>
+      <li class="active"><a href="index.php?halaman=index">Dashboard</a> / Anggota Resmi</li>
     </ol>
 </div>
    
@@ -76,17 +76,17 @@
             if($_SERVER['REQUEST_METHOD'] == "POST") {
               $pencarian = trim(mysqli_real_escape_string($connect, $_POST['pencarian']));
               if ($pencarian != '') {
-                $sql = "SELECT id, nim, nama, nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama, jabatan FROM anggota_resmi WHERE nim LIKE '%$pencarian%' OR nama LIKE '%$pencarian%' OR nama_panggilan LIKE '%$pencarian%' OR angkatan LIKE '%$pencarian%' OR jk LIKE '%$pencarian%' OR alamat LIKE '%$pencarian%' OR no_hp LIKE '%$pencarian%' OR email LIKE '%$pencarian%' OR jabatan LIKE '%$pencarian%' ORDER BY id DESC";
+                $sql = "SELECT id, nim, nama, nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama, jabatan FROM anggota_resmi WHERE nim LIKE '%$pencarian%' OR nama LIKE '%$pencarian%' OR nama_panggilan LIKE '%$pencarian%' OR angkatan LIKE '%$pencarian%' OR jk LIKE '%$pencarian%' OR alamat LIKE '%$pencarian%' OR no_hp LIKE '%$pencarian%' OR email LIKE '%$pencarian%' OR jabatan LIKE '%$pencarian%' ORDER BY nim ASC";
                 $query = $sql;
                 $queryJml = $sql;
               } else {
                 $query = "SELECT id, nim, nama, nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama, jabatan FROM anggota_resmi ORDER BY id DESC LIMIT $posisi, $batas ";
-                $queryJml = "SELECT id, nim, nama, nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama, jabatan FROM anggota_resmi ORDER BY id DESC";
+                $queryJml = "SELECT id, nim, nama, nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama, jabatan FROM anggota_resmi ORDER BY nim ASC";
                 $no = $posisi + 1;
               }
             } else {
-              $query = "SELECT id, nim, nama, nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama, jabatan FROM anggota_resmi ORDER BY id DESC LIMIT $posisi, $batas ";
-              $queryJml = "SELECT id, nim, nama, nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama, jabatan FROM anggota_resmi ORDER BY id DESC";
+              $query = "SELECT id, nim, nama, nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama, jabatan FROM anggota_resmi ORDER BY nim ASC LIMIT $posisi, $batas ";
+              $queryJml = "SELECT id, nim, nama, nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama, jabatan FROM anggota_resmi ORDER BY nim ASC";
               $no = $posisi + 1;
             }
 

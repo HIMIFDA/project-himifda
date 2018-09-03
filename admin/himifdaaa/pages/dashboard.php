@@ -1,6 +1,6 @@
 <div class="col-md-12" style="padding:0px">
 	<ol class="breadcrumb" style="margin:0;border-radius:0;">
-    	<li class="active">Home</li>
+    	<li class="active">Dashboard</li>
     </ol>
 </div>
    
