@@ -15,13 +15,18 @@
  <?php
 
             include '../config/koneksi.php';
- $query = mysqli_query($konek, "SELECT id, nama_file FROM struktural ORDER BY id DESC LIMIT 1")or die(mysqli_error($konek));
+ $query = mysqli_query($konek, "SELECT id, nama_file, deskripsi FROM struktural ORDER BY id DESC LIMIT 1")or die(mysqli_error($konek));
 
   $no = 1;        
                       while($data = mysqli_fetch_array($query)){  
         
          
-          echo '<center><img src ='.$data['nama_file'].'</center><br><br>';
+          ?>
+
+           <p><center><img height="500" width="800" src="../admin/himifdaaa/images/<?php echo $data['nama_file'] ?>"></a></center></p><hr>
+           <p><center><?php echo $data['deskripsi'] ?></center></p>
+          <?php
+
           
           
            
