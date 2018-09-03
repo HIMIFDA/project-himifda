@@ -23,7 +23,7 @@
          
           ?>
 
-           <p><center><img height="300" width="800" src="../admin/himifdaaa/images/<?php echo $data['nama_file'] ?>"></a></center></p>
+           <p><center><img height="500" width="800" src="../admin/himifdaaa/images/<?php echo $data['nama_file'] ?>"></a></center></p><hr>
            <p><center><?php echo $data['deskripsi'] ?></center></p>
           <?php
 
