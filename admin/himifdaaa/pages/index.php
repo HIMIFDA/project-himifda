@@ -157,12 +157,16 @@
                         //CRUD visimisi
                         elseif ($halaman=='data_visimisi')
                             include 'data_visimisi.php';
+                        elseif ($halaman=='edit_visimisi')
+                            include 'edit_visimisi.php';
                         
 
                         //CRUD Struktural
 
 
                         //CRUD Event
+                         elseif ($halaman=='data_kegiatan')
+                            include 'data_kegiatan.php';
 
 
                         //CRUD alumni  
@@ -186,17 +190,27 @@
                             include 'data_kritiksaran.php';
                         elseif ($halaman=='input_kritiksaran')
                             include 'input_kritiksaran.php';
+                        elseif ($halaman=='edit_kritiksaran')
+                            include 'edit_kritiksaran.php';
 
 
                         //CRUD FAQ  
                         elseif ($halaman=='data_faq')
                             include 'data_faq.php';
+                        elseif ($halaman=='edit_faq')
+                            include 'edit_faq.php';
 
 
                         //CRUD Modul
-
+                        elseif ($halaman=='data_modul')
+                            include 'data_modul.php';
+                        
 
                         //CRUD Info Beasiswa
+                        elseif ($halaman=='data_info_beasiswa')
+                            include 'data_info_beasiswa.php';
+                        elseif ($halaman=='edit_info_beasiswa')
+                            include 'edit_info_beasiswa.php';
 
 
                         elseif ($halaman=='gallery')
@@ -207,36 +221,20 @@
                             include 'data_struktur.php';
                         elseif ($halaman=='data_kalender_akademik')
                             include 'data_kalender_akademik.php';
-                         elseif ($halaman=='data_sejarah')
+                        elseif ($halaman=='data_sejarah')
                             include 'data_sejarah.php';
-                         elseif ($halaman=='data_kegiatan')
-                            include 'data_kegiatan.php';
                         elseif ($halaman=='data_mata_kuliah')
                             include 'data_mata_kuliah.php';
-                        elseif ($halaman=='data_faq')
-                            include 'data_faq.php';
                         elseif ($halaman=='data_galery')
                             include 'data_galery.php';
-                        elseif ($halaman=='data_modul')
-                            include 'data_modul.php';
                         elseif ($halaman=='data_berita')
                             include 'data_berita.php';
-                        elseif ($halaman=='data_info_beasiswa')
-                            include 'data_info_beasiswa.php';
-                        elseif ($halaman=='edit_visimisi')
-                            include 'edit_visimisi.php';
                         elseif ($halaman=='edit_sejarah')
                             include 'edit_sejarah.php';
-                        elseif ($halaman=='edit_kritiksaran')
-                            include 'edit_kritiksaran.php';
-                        elseif ($halaman=='edit_faq')
-                            include 'edit_faq.php';
                         elseif ($halaman=='edit_galery')
                             include 'edit_galery.php';
                         elseif ($halaman=='edit_berita')
                             include 'edit_berita.php';
-                        elseif ($halaman=='edit_info_beasiswa')
-                            include 'edit_info_beasiswa.php';
 
                                        
                      ?>
