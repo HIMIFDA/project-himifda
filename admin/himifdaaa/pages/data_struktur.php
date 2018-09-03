@@ -34,7 +34,7 @@
 <div class="col-md-12" style="min-height:500px">
   <h3><b>Struktural</b></h3>
     <hr>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus-circle fa-fw"></i>Tambah Struktural</button>
+    <a href="index.php?halaman=tambah_struktur"><button type="button" class="btn btn-primary"><i class="fa fa-plus-circle fa-fw"></i>Tambah Struktural</button></a>
     <br>
     <br>
     <form class="form-horizontal" method="POST">
@@ -55,7 +55,7 @@
 
             include 'config/koneksi.php';
 
-            $query = mysqli_query($connect, "SELECT * FROM struktural")or die(mysqli_error());
+            $query = mysqli_query($connect, "SELECT * FROM struktural ORDER BY id DESC")or die(mysqli_error());
                     if(mysqli_num_rows($query) == 0){ 
                       echo '<tr><td colspan="4" align="center">Tidak ada data!</td></tr>';    
                     }

@@ -1,13 +1,3 @@
- <?php
-
-include 'config/koneksi.php';
-
-$id  = $_GET['id'];
-
-$edit    = "SELECT * FROM struktural WHERE id = '$id'";
-$hasil   = mysqli_query($connect, $edit)or die(mysql_error());
-$data    = mysqli_fetch_array($hasil);
-?>
 <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 <style type="text/css">
 .form-style-10{
@@ -133,32 +123,17 @@ $data    = mysqli_fetch_array($hasil);
 
 
 <div class="form-style-10">
-<h1>Struktural HIMIFDA<span></span></h1>
-<form  method="post" action="config/edit_struktur.php">
+<h1>Silahkan, <span>Tambah data struktural periode terbaru.</span></h1>
+<form  method="post" action="simpan_struktur.php" enctype="multipart/form-data">
  
-  <input type="hidden" name="id"  value="<?php echo $data['id']; ?>">
+  <input type="hidden" name="id">
 
-    <div class="section"><span>1</span>Struktural</div>
+    <div class="section"><span>1</span>Data Struktural Periode Terbaru</div>
     <div class="inner-wrap">
-        <label>Nama File<input type="text" name="nama_file"  value="<?php echo $data['nama_file']; ?>"/></label>
-        <label>Deskripsi<input type="text" name="deskripsi"  value="<?php echo $data['deskripsi']; ?>"/></label>
-        <label>Tanggal Upload<input readonly type="text" name="tgl_upload"  value="<?php echo $data['tgl_upload']; ?>"/></label>
-        <!-- <label>Alamat <textarea name="alamat"></textarea></label>
-        <label>Tempat Lahir <input type="text" name="tempat_lahir" /></label>
-        <label>Tanggal Lahir <input type="date" name="tgl_lahir" /></label>
-        <label>Jenis Kelamin <input type="text" name="jk" /></label>
-        <label>Agama <input type="text" name="agama" /></label> -->
-
+        <label>Gambar<input type="file" name="fileToUpload" id="fileToUpload"></label>
+        <label>Deskripsi<input type="text" name="deskripsi"></label>
+        <label>Tanggal Upload<input type="date" name="tgl_upload"></label>
     </div>
-
-   
-
-<!-- <div class="section"><span>3</span>IP</div>
- <div class="inner-wrap">
-        <label>IPS <input type="text" name="ips" /></label>
-        <label>IPK <input type="text" name="ipk" /></label>
-    </div>
- -->
 
     <div class="button-section">
      <input type="submit" value="Submit" />
