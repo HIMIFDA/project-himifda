@@ -23,8 +23,7 @@
         <th>Tanggal Lahir</th>
         <th>Agama</th>
         <th>Jabatan</th>
-
-        <th colspan="2">Action</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -54,8 +53,14 @@
                                                 echo '<td>'.$data['tgl_lahir'].'</td>';
                                                 echo '<td>'.$data['agama'].'</td>';
                                                 echo '<td>'.$data['jabatan'].'</td>';
-                                                echo '<td><a href=index.php?halaman=edit&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
-                                                echo '<td><a href=config/hapus_anggota.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';
+                                                echo '
+                                                <td>
+                                                    <a href=index.php?halaman=read_anggota&&id='.$data['id'].'><span class="glyphicon glyphicon-eye">
+                                                    </a>
+                                                    <a href=index.php?halaman=edit_anggota&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a>
+                                                </td>';
+                                                // echo '<td><a href=index.php?halaman=edit_anggota&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
+                                                // echo '<td><a href=config/hapus_anggota.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';
                                                 echo '</tr>';
                                                 $no++;  
                                             }
