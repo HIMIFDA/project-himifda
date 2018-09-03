@@ -68,7 +68,7 @@
                         <center><img width="200" src="../../../images/logo.png"></center>
                         <br>
                         <li>
-                            <a href="index.php?halaman=index"><i></i>Dashboard</a>
+                            <a href="index.php?halaman=index"><i></i>Dashboard (udah)</a>
                         </li>
                         <li>
                            
@@ -76,7 +76,7 @@
                             <a href="index.php?halaman=data_anggota"><i></i> Anggota Resmi</a>
                         </li>
                         <li>
-                            <a href="index.php?halaman=data_visimisi"><i></i> Visi Misi</a>
+                            <a href="index.php?halaman=data_visimisi"><i></i> Visi Misi (udah)</a>
                         </li>
                         <li>
                             <a href="index.php?halaman=data_struktur"><i></i> Struktural </a>
@@ -118,7 +118,7 @@
                             <a href="index.php?halaman=data_info_beasiswa"><i></i> Info Beasiswa </a>
                         </li>
                         <li>
-                            <a href="logout.php"><i></i> Logout </a>
+                            <a href="logout.php"><i></i> Logout (udah) </a>
                         </li>
                        
                             </ul>
@@ -147,58 +147,28 @@
                             include 'dashboard.php';
                         elseif ($halaman=='input_faq')
                             include 'input_faq.php';
-
-                        //CRUD anggota
                         elseif ($halaman=='data_anggota')
                             include 'data_anggota.php';
                         elseif ($halaman=='input_anggota')
                             include 'input_anggota.php';
-
-                        //CRUD visimisi
                         elseif ($halaman=='data_visimisi')
                             include 'data_visimisi.php';
-                        
-
-                        //CRUD Struktural
-
-
-                        //CRUD Event
-
-
-                        //CRUD alumni  
                         elseif ($halaman=='data_alumni')
                             include 'data_alumni.php';
                         elseif ($halaman=='input_alumni')
                             include 'input_alumni.php';
                         elseif ($halaman=='edit_alumni')
                             include 'edit_alumni.php';
-                        
-
-                        //CRUD IP
                         elseif ($halaman=='data_ip')
                             include 'data_ip.php'; 
                         elseif ($halaman=='input_ip')
                             include 'input_ip.php';
-
-
-                        //CRUD Kritik dan Saran 
                         elseif ($halaman=='data_kritiksaran')
                             include 'data_kritiksaran.php';
                         elseif ($halaman=='input_kritiksaran')
                             include 'input_kritiksaran.php';
-
-
-                        //CRUD FAQ  
                         elseif ($halaman=='data_faq')
                             include 'data_faq.php';
-
-
-                        //CRUD Modul
-
-
-                        //CRUD Info Beasiswa
-
-
                         elseif ($halaman=='gallery')
                             include 'gallery.php'; 
                         elseif ($halaman=='struktur')

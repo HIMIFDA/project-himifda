@@ -140,13 +140,10 @@
 
              if ($halaman=='faq')
               include 'faq.php';
-
-            if ($halaman=='kalender')
+             if ($halaman=='kalender')
               include 'kalender.php';
-
              if ($halaman=='berita1')
               include 'berita1.php';
-
              if ($halaman=='berita2')
               include 'berita2.php';
              if ($halaman=='berita3')
