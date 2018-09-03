@@ -42,7 +42,7 @@
             <th>No</th>
             <th>Visi</th>
             <th>Misi</th>
-            <th colspan="2">Action</th>
+            <th width="70">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -66,7 +66,7 @@
                                                
                                                 
                                                 echo '<td><a href=index.php?halaman=edit_visimisi&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
-                                                echo '<td><a href=config/hapus_visimisi.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';
+                                              /*  echo '<td><a href=config/hapus_visimisi.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';*/
                                                 echo '</tr>';
                         $no++;  
                       }
