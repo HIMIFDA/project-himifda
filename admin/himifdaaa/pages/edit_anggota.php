@@ -4,9 +4,6 @@ include 'config/koneksi.php';
 
 $id  = $_GET['id'];
 
-$edit    = "SELECT id, nim, nama,nama_panggilan, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama,jabatan FROM anggota_resmi WHERE id = '$id'";
-$hasil   = mysqli_query($connect, $edit)or die(mysql_error());
-$data    = mysqli_fetch_array($hasil);
 ?>
 <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 <style type="text/css">
@@ -133,14 +130,18 @@ $data    = mysqli_fetch_array($hasil);
 
 
 <div class="form-style-10">
-<h1>Isi datamu!<span>Form ini hanya diisi untuk mahasiswa yang terdaftar menjadi Anggota Resmi Himifda</span></h1>
+<h1>Edit datamu!<span>Form ini hanya diisi untuk mahasiswa yang terdaftar menjadi Anggota Resmi Himifda</span></h1>
 <form  method="post" action="config/simpan_anggota.php">
- 
-  <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+ <?php
+ $edit    = "SELECT * FROM anggota_resmi WHERE id = '$id'";
+ $hasil   = mysqli_query($connect, $edit)or die(mysqli_error($connect));
+ $data    = mysqli_fetch_array($hasil);
+ ?>
+  <input type="text" name="id" value="<?php echo $data['id']; ?>">
 
     <div class="section"><span>1</span>Biodata</div>
     <div class="inner-wrap">
-        <label>Nama Lengkap <input type="text" name="nama"value="<?php echo $data['nama']; ?>"></label>
+        <label>Nama Lengkap <input type="text" name="nama" value="<?php echo $data['nama']; ?>"></label>
         <label>Nama Panggilan <input type="text" name="nama_panggilan" value="<?php echo $data['nama_panggilan']; ?>"></label>
         <label>Alamat<textarea name="alamat"></textarea></label>
         <label>Tempat Lahir <input type="text" name="tempat_lahir" value="<?php echo $data['tempat_lahir']; ?>"></label>

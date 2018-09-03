@@ -151,9 +151,11 @@
                             include 'data_anggota.php';
                         elseif ($halaman=='input_anggota')
                             include 'input_anggota.php';
+                        elseif ($halaman=='edit_anggota')
+                            include 'edit_anggota.php';
                         elseif ($halaman=='data_visimisi')
                             include 'data_visimisi.php';
-<<<<<<< HEAD
+
                         elseif ($halaman=='edit_visimisi')
                             include 'edit_visimisi.php';
                         
@@ -167,8 +169,6 @@
 
 
                         //CRUD alumni  
-=======
->>>>>>> ba52e95d14768d433eb2c8216cbd2ba747de4206
                         elseif ($halaman=='data_alumni')
                             include 'data_alumni.php';
                         elseif ($halaman=='input_alumni')
@@ -183,7 +183,7 @@
                             include 'data_kritiksaran.php';
                         elseif ($halaman=='input_kritiksaran')
                             include 'input_kritiksaran.php';
-<<<<<<< HEAD
+
                         elseif ($halaman=='edit_kritiksaran')
                             include 'edit_kritiksaran.php';
 
@@ -206,11 +206,8 @@
                         elseif ($halaman=='edit_info_beasiswa')
                             include 'edit_info_beasiswa.php';
 
-
-=======
                         elseif ($halaman=='data_faq')
                             include 'data_faq.php';
->>>>>>> ba52e95d14768d433eb2c8216cbd2ba747de4206
                         elseif ($halaman=='gallery')
                             include 'gallery.php'; 
                         elseif ($halaman=='struktur')
@@ -233,16 +230,13 @@
                             include 'edit_galery.php';
                         elseif ($halaman=='edit_berita')
                             include 'edit_berita.php';
-<<<<<<< HEAD
-=======
+
                         elseif ($halaman=='edit_info_beasiswa')
                             include 'edit_info_beasiswa.php';
                         elseif ($halaman=='edit_struktur')
                             include 'edit_struktur.php';
                         elseif ($halaman=='tambah_struktur')
                             include 'tambah_struktur.php';
->>>>>>> ba52e95d14768d433eb2c8216cbd2ba747de4206
-
                                        
                      ?>
                     </div>
