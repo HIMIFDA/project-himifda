@@ -416,44 +416,74 @@
                         <!-- <h1 class="page-header">Blank</h1> -->
                         <?php
 
-                        if ($halaman=='input_anggota')
-                            include 'input_anggota.php';
-                        elseif ($halaman=='input_alumni')
-                            include 'input_alumni.php';
-                        elseif ($halaman=='index')
+                        if ($halaman=='index')
                             include 'dashboard.php';
                         elseif ($halaman=='input_faq')
                             include 'input_faq.php';
-                        elseif ($halaman=='input_ip')
-                            include 'input_ip.php';
-                        elseif ($halaman=='input_kritiksaran')
-                            include 'input_kritiksaran.php';
+
+                        //CRUD anggota
                         elseif ($halaman=='data_anggota')
-                            include 'data_anggota.php';  
-                        elseif ($halaman=='gallery')
-                            include 'gallery.php';  
+                            include 'data_anggota.php';
+                        elseif ($halaman=='input_anggota')
+                            include 'input_anggota.php';
+
+                        //CRUD visimisi
+                        elseif ($halaman=='data_visimisi')
+                            include 'data_visimisi.php';
+                        
+
+                        //CRUD Struktural
+
+
+                        //CRUD Event
+
+
+                        //CRUD alumni  
                         elseif ($halaman=='data_alumni')
                             include 'data_alumni.php';
+                        elseif ($halaman=='input_alumni')
+                            include 'input_alumni.php';
+                        elseif ($halaman=='edit_alumni')
+                            include 'edit_alumni.php';
+                        
+
+                        //CRUD IP
                         elseif ($halaman=='data_ip')
-                            include 'data_ip.php';   
-                        elseif ($halaman=='data_faq')
-                            include 'data_faq.php'; 
+                            include 'data_ip.php'; 
+                        elseif ($halaman=='input_ip')
+                            include 'input_ip.php';
+
+
+                        //CRUD Kritik dan Saran 
                         elseif ($halaman=='data_kritiksaran')
-                            include 'data_kritiksaran.php'; 
+                            include 'data_kritiksaran.php';
+                        elseif ($halaman=='input_kritiksaran')
+                            include 'input_kritiksaran.php';
+
+
+                        //CRUD FAQ  
+                        elseif ($halaman=='data_faq')
+                            include 'data_faq.php';
+
+
+                        //CRUD Modul
+
+
+                        //CRUD Info Beasiswa
+
+
+                        elseif ($halaman=='gallery')
+                            include 'gallery.php'; 
                         elseif ($halaman=='struktur')
                             include 'struktur.php';  
                         elseif ($halaman=='data_struktur')
                             include 'data_struktur.php';
-                        elseif ($halaman=='edit_alumni')
-                            include 'edit_alumni.php';
-                         elseif ($halaman=='data_kalender_akademik')
+                        elseif ($halaman=='data_kalender_akademik')
                             include 'data_kalender_akademik.php';
                          elseif ($halaman=='data_sejarah')
                             include 'data_sejarah.php';
                          elseif ($halaman=='data_kegiatan')
                             include 'data_kegiatan.php';
-                        elseif ($halaman=='data_visimisi')
-                            include 'data_visimisi.php';
                         elseif ($halaman=='data_mata_kuliah')
                             include 'data_mata_kuliah.php';
                         elseif ($halaman=='data_faq')
