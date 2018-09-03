@@ -267,6 +267,9 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
+                        <br>
+                        <center><img width="200" src="../../../images/logo.png"></center>
+                        <br>
                         <li>
                             <a href="index.php?halaman=index"><i></i>Dashboard</a>
                         </li>
