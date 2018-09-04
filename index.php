@@ -261,11 +261,12 @@
           </div>
  <div class="col m4 s12">
             <h5 class="white-text"><b><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Media Social</font></b></h5>
-            <button type="button" class="btn btn-info"><a href="https://www.facebook.com/himifda.unsada/"><font color="white">Facebook</font></a></button>
+            <button type="button" class="btn btn-primary"><a href="https://www.facebook.com/himifda.unsada/"><font color="white">Facebook</font></a></button>
             <button type="button" class="btn btn-warning"><a href="https://www.instagram.com/himifda/?hl=id"><font color="white">Instagram</font></a></button>
-            <button type="button" class="btn btn-primary"><a href="https://twitter.com/himifda08"><font color="white">Twitter</font></a></button><br><br>
-            <button type="button" class="btn btn-danger"><a href="https://www.youtube.com/channel/UCfaMHmPmMF0HHsbqsWJdH7Q"><font color="white">Youtube</font></a></button>
-             &nbsp;<button type="button" class="btn btn-success">Email : himifda08@gmail.com</button>
+            <button type="button" class="btn btn-info"><a href="https://twitter.com/himifda08"><font color="white">Twitter</font></a></button><br><br>
+            <button type="button" class="btn btn-success"><a href=""><font color="white">Line: @uuw2562z</font></a></button>
+            <button type="button" class="btn btn-danger"><a href="https://www.youtube.com/channel/UCfaMHmPmMF0HHsbqsWJdH7Q"><font color="white">Youtube</font></a></button><br><br>
+             <button type="button" class="btn btn-default">Email : himifda08@gmail.com</button>
 
           </div>
           <div class="col m4 s12">

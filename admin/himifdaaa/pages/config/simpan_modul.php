@@ -4,7 +4,7 @@
 
    $semester = $_POST["semester"];
    $matkul   = $_POST["matkul"];
-   $judul    = $_POST["judul_materi"];
+   $judul_materi    = $_POST["judul_materi"];
    $target_dir = "../../modul/";
    $target_file = $target_dir.basename($_FILES["fileToUpload"]["name"]);
    $uploadOk=1;
@@ -21,7 +21,7 @@
     }
     
     // Check file size
-    if ($_FILES["fileToUpload"]["size"] > 500000) {
+    if ($_FILES["fileToUpload"]["size"] > 10000000000) {
         echo "Sorry, your file is too large.";
         $uploadOk = 0;
     }
@@ -43,12 +43,12 @@
     }
 
 
- $input="INSERT INTO modul(id,Semester,Mata_Kuliah,Judul_Materi,file)values('','$semester','$matkul','$judul','$target_file')";
+ $input="INSERT INTO modul(id,Semester,Mata_Kuliah,Judul_Materi,file)values('','$semester','$matkul','$judul_materi','$target_file')";
     $updaterespon   = mysqli_query($connect, $input)or die(mysqli_error($connect));
     if ($updaterespon)
         {
-            // echo "<strong><center>Materi atau Soal Anda Berhasil Diuploads</center></strong>";
-            // echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=index.php?halaman=data_modul">';
+            echo "<strong><center>Materi atau Soal Anda Berhasil Diuploads</center></strong>";
+            echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../index.php?halaman=data_modul">';
         }
     else {
 
