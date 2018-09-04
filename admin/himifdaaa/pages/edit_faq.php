@@ -160,7 +160,7 @@ $data    = mysqli_fetch_array($hasil);
  -->
 
     <div class="button-section">
-     <input type="submit" value="Submit" />
+     <input type="submit" value="Edit" />
      <!-- <input type="submit" class="btn btn-default" value="Submit"> -->
    <!--   <span class="privacy-policy">
      <input type="checkbox" name="field7">You agree to our Terms and Policy. 

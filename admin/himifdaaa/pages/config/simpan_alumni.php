@@ -34,7 +34,7 @@ $agama = $_POST['agama'];
 
 
 echo "Data telah berhasil disimpan.";
-echo '<META HTTP-EQUIV="REFRESH" CONTENT ="1; url=../index.php?halaman=input_alumni">';
+echo '<META HTTP-EQUIV="REFRESH" CONTENT ="1; url=../index.php?halaman=data_alumni">';
 
 ?>
 

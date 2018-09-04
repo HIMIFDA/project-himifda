@@ -123,7 +123,7 @@
 
 
 <div class="form-style-10">
-<h1>Isi datamu!<span>Form ini hanya diisi untuk mahasiswa yang terdaftar menjadi Anggota Resmi Himifda</span></h1>
+<h1>Isi data anggota!<span>Form ini hanya diisi untuk mahasiswa yang terdaftar sebagai Anggota Resmi Himifda</span></h1>
 <form  method="post" action="config/simpan_anggota.php">
  
   <input type="hidden" name="id">

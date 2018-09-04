@@ -4,9 +4,6 @@ include 'config/koneksi.php';
 
 $id  = $_GET['id'];
 
-$edit    = "SELECT id, nim, nama, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama FROM alumni WHERE id = '$id'";
-$hasil   = mysqli_query($connect, $edit)or die(mysql_error());
-$data    = mysqli_fetch_array($hasil);
 ?>
 <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 <style type="text/css">
@@ -133,39 +130,43 @@ $data    = mysqli_fetch_array($hasil);
 
 
 <div class="form-style-10">
-<h1>Isi datamu!<span>Form ini hanya diisi oleh Alumni Himifda</span></h1>
-<form  method="post" action="config/edit_alumni.php">
- 
-  <input type="hidden" name="id"  value="<?php echo $data['id']; ?>">
+<h1>Data Lengkap Anggota</h1>
+<form  method="post" action="">
+ <?php
+ $edit    = "SELECT * FROM anggota_resmi WHERE id = '$id'";
+ $hasil   = mysqli_query($connect, $edit)or die(mysqli_error($connect));
+ $data    = mysqli_fetch_array($hasil);
+ ?>
+  <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
 
     <div class="section"><span>1</span>Biodata</div>
     <div class="inner-wrap">
-        <label>Nama Lengkap <input type="text" name="nama"  value="<?php echo $data['nama']; ?>"/></label>
-        <!-- <label>Nama Panggilan <input type="text" name="nama_panggilan" /></label> -->
-        <label>Alamat <input type="text" name="alamat"  value="<?php echo $data['alamat']; ?>"></label>
-        <label>Tempat Lahir <input type="text" name="tempat_lahir"  value="<?php echo $data['tempat_lahir']; ?>"/></label>
-        <label>Tanggal Lahir <input type="date" name="tgl_lahir"  value="<?php echo $data['tgl_lahir']; ?>"/></label>
-        <label>Jenis Kelamin <input type="text" name="jk"  value="<?php echo $data['jk']; ?>"/></label>
-        <label>Agama <input type="text" name="agama"  value="<?php echo $data['agama']; ?>"/></label>
+        <label>Nama Lengkap <input type="text" readonly name="nama" value="<?php echo $data['nama']; ?>"></label>
+        <label>Nama Panggilan <input type="text" readonly name="nama_panggilan" value="<?php echo $data['nama_panggilan']; ?>"></label>
+        <label>Alamat<input type="text" readonly name="alamat" value="<?php echo $data['alamat']; ?>"></label>
+        <label>Tempat Lahir <input readonly type="text" name="tempat_lahir" value="<?php echo $data['tempat_lahir']; ?>"></label>
+        <label>Tanggal Lahir <input readonly type="date" name="tgl_lahir" value="<?php echo $data['tgl_lahir']; ?>"></label>
+        <label>Jenis Kelamin <input readonly type="text" name="jk" value="<?php echo $data['jk']; ?>"></label>
+        <label>Agama <input type="text" readonly name="agama" value="<?php echo $data['agama']; ?>"></label>
 
     </div>
 
-    <div class="section"><span>2</span>Data Kemahasiswaan</div>
+    <div class="section"><span>2</span>Data Mahasiswa</div>
     <div class="inner-wrap">
-        <label>NIM <input type="text" name="nim"  value="<?php echo $data['nim']; ?>"/></label>
-        <label>Angkatan <input type="text" name="angkatan"  value="<?php echo $data['angkatan']; ?>"/></label>
-        <!-- <label>Jabatan <input type="text" name="jabatan" /></label> -->
+        <label>NIM <input type="text" readonly name="nim" value="<?php echo $data['nim']; ?>"></label>
+        <label>Angkatan <input type="text" readonly name="angkatan" value="<?php echo $data['angkatan']; ?>"></label>
+        <label>Jabatan <input type="text" readonly name="jabatan" value="<?php echo $data['jabatan']; ?>"></label>
     </div>
 
 <div class="section"><span>3</span>Kontak</div>
  <div class="inner-wrap">
-        <label>Alamat E-mail <input type="email" name="email"  value="<?php echo $data['email']; ?>"/></label>
-        <label>No. HP/Telepon <input type="text" name="no_hp"  value="<?php echo $data['no_hp']; ?>"/></label>
+        <label>Alamat E-mail <input type="email" readonly name="email" value="<?php echo $data['email']; ?>"></label>
+        <label>No. HP/Telepon <input type="text" readonly name="no_hp" value="<?php echo $data['no_hp']; ?>"></label>
     </div>
 
 
     <div class="button-section">
-     <input type="submit" value="Edit" />
+     <!-- <input type="submit" value="Submit" /> -->
      <!-- <input type="submit" class="btn btn-default" value="Submit"> -->
    <!--   <span class="privacy-policy">
      <input type="checkbox" name="field7">You agree to our Terms and Policy. 

@@ -24,7 +24,7 @@ $ips = $_POST['ips'];
 
 
 echo "Data telah berhasil disimpan.";
-echo '<META HTTP-EQUIV="REFRESH" CONTENT ="1; url=../index.php?halaman=input_ip">';
+echo '<META HTTP-EQUIV="REFRESH" CONTENT ="1; url=../index.php?halaman=data_ip">';
 
 ?>
 

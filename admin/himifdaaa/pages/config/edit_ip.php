@@ -18,7 +18,7 @@ $ipk = $_POST['ipk'];
 $edit = mysqli_query($connect,"UPDATE ipk SET id='$id', nama='$nama', nim='$nim', semester='$semester', ips='$ips', ipk='$ipk' WHERE id='$id'");
 
 echo "Data telah berhasil diedit.";
-echo '<META HTTP-EQUIV="REFRESH" CONTENT ="1; url=../index.php?halaman=data_anggota">';			
+echo '<META HTTP-EQUIV="REFRESH" CONTENT ="1; url=../index.php?halaman=data_ip">';			
 
 
 // $sql = $pdo->prepare("INSERT INTO tbl_daily VALUES(:nis,:tgl,:soa_ori,:soa_cho,:soa_che,:soa_tb,:soa_pb,:soa_kk,:soa_kv,:soa_tc,:soa_jml,:pen_ori,:pen_cho,:pen_che,:pen_tb,:pen_pb,:pen_kk,:pen_kv,:pen_tc,:pen_jml,:pst_tgl,:pst_ori,:pst_cho,:pst_che,:pst_tb,:pst_pb,:pst_kk,:pst_kv,:pst_tc,:pst_jml,:so,:keterangan)");

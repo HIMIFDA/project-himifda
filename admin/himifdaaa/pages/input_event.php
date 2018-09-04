@@ -1,13 +1,3 @@
- <?php
-
-include 'config/koneksi.php';
-
-$id  = $_GET['id'];
-
-$edit    = "SELECT id, nim, nama, angkatan, jk, alamat, no_hp, email, tempat_lahir, tgl_lahir, agama FROM alumni WHERE id = '$id'";
-$hasil   = mysqli_query($connect, $edit)or die(mysql_error());
-$data    = mysqli_fetch_array($hasil);
-?>
 <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 <style type="text/css">
 .form-style-10{
@@ -133,43 +123,25 @@ $data    = mysqli_fetch_array($hasil);
 
 
 <div class="form-style-10">
-<h1>Isi datamu!<span>Form ini hanya diisi oleh Alumni Himifda</span></h1>
-<form  method="post" action="config/edit_alumni.php">
+<h1>Isi data event!<span>Form ini hanya diisi untuk mengisi data kegiatan/event yang ada di HIMIFDA.</span></h1>
+<form  method="post" action="config/simpan_event.php" enctype="multipart/form-data">
  
-  <input type="hidden" name="id"  value="<?php echo $data['id']; ?>">
+  <input type="hidden" name="id">
 
-    <div class="section"><span>1</span>Biodata</div>
+    <div class="section"><span>1</span>Data Kegiatan / Event</div>
     <div class="inner-wrap">
-        <label>Nama Lengkap <input type="text" name="nama"  value="<?php echo $data['nama']; ?>"/></label>
-        <!-- <label>Nama Panggilan <input type="text" name="nama_panggilan" /></label> -->
-        <label>Alamat <input type="text" name="alamat"  value="<?php echo $data['alamat']; ?>"></label>
-        <label>Tempat Lahir <input type="text" name="tempat_lahir"  value="<?php echo $data['tempat_lahir']; ?>"/></label>
-        <label>Tanggal Lahir <input type="date" name="tgl_lahir"  value="<?php echo $data['tgl_lahir']; ?>"/></label>
-        <label>Jenis Kelamin <input type="text" name="jk"  value="<?php echo $data['jk']; ?>"/></label>
-        <label>Agama <input type="text" name="agama"  value="<?php echo $data['agama']; ?>"/></label>
+        <label>Kode Event <input type="text" name="kode_event"></label>
+        <label>Tanggal<input type="date" name="tgl"></label>
+        <label>Nama kegiatan<input type="text" name="nama_kegiatan"></label>
+        <label>Bidang<input type="text" name="bidang"></label>
+        <label>Gambar<input type="file" name="fileToUpload" id="fileToUpload"></label>
+        <label>Deskripsi <input type="text" name="deskripsi"></label>
+        <label>Kegiatan<input type="text" name="kegiatan"></label>
 
     </div>
-
-    <div class="section"><span>2</span>Data Kemahasiswaan</div>
-    <div class="inner-wrap">
-        <label>NIM <input type="text" name="nim"  value="<?php echo $data['nim']; ?>"/></label>
-        <label>Angkatan <input type="text" name="angkatan"  value="<?php echo $data['angkatan']; ?>"/></label>
-        <!-- <label>Jabatan <input type="text" name="jabatan" /></label> -->
-    </div>
-
-<div class="section"><span>3</span>Kontak</div>
- <div class="inner-wrap">
-        <label>Alamat E-mail <input type="email" name="email"  value="<?php echo $data['email']; ?>"/></label>
-        <label>No. HP/Telepon <input type="text" name="no_hp"  value="<?php echo $data['no_hp']; ?>"/></label>
-    </div>
-
-
     <div class="button-section">
-     <input type="submit" value="Edit" />
-     <!-- <input type="submit" class="btn btn-default" value="Submit"> -->
-   <!--   <span class="privacy-policy">
-     <input type="checkbox" name="field7">You agree to our Terms and Policy. 
-     </span> -->
+     <input type="submit" value="Submit" />
+     
     </div>
 </form>
 </div>

@@ -130,20 +130,20 @@ $id  = $_GET['id'];
 
 
 <div class="form-style-10">
-<h1>Edit datamu!<span>Form ini hanya diisi untuk mahasiswa yang terdaftar menjadi Anggota Resmi Himifda</span></h1>
-<form  method="post" action="config/simpan_anggota.php">
+<h1>Edit data anggota!<span>Form ini untuk mengedit data anggota dan hanya diisi untuk mahasiswa yang terdaftar menjadi Anggota Resmi Himifda</span></h1>
+<form  method="post" action="config/edit_anggota.php">
  <?php
  $edit    = "SELECT * FROM anggota_resmi WHERE id = '$id'";
  $hasil   = mysqli_query($connect, $edit)or die(mysqli_error($connect));
  $data    = mysqli_fetch_array($hasil);
  ?>
-  <input type="text" name="id" value="<?php echo $data['id']; ?>">
+  <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
 
     <div class="section"><span>1</span>Biodata</div>
     <div class="inner-wrap">
         <label>Nama Lengkap <input type="text" name="nama" value="<?php echo $data['nama']; ?>"></label>
         <label>Nama Panggilan <input type="text" name="nama_panggilan" value="<?php echo $data['nama_panggilan']; ?>"></label>
-        <label>Alamat<textarea name="alamat"></textarea></label>
+        <label>Alamat<input type="text" name="alamat" value="<?php echo $data['alamat']; ?>"></label>
         <label>Tempat Lahir <input type="text" name="tempat_lahir" value="<?php echo $data['tempat_lahir']; ?>"></label>
         <label>Tanggal Lahir <input type="date" name="tgl_lahir" value="<?php echo $data['tgl_lahir']; ?>"></label>
         <label>Jenis Kelamin <input type="text" name="jk" value="<?php echo $data['jk']; ?>"></label>

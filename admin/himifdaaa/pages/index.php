@@ -117,6 +117,9 @@
                         <li>
                             <a href="index.php?halaman=data_info_beasiswa"><i></i> Info Beasiswa </a>
                         </li>
+                         <li>
+                            <a href="index.php?halaman=manajemen_user"><i></i> Manejemen User </a>
+                        </li>
                         <li>
                             <a href="logout.php"><i></i> Logout </a>
                         </li>
@@ -166,6 +169,8 @@
                         //CRUD Event
                          elseif ($halaman=='data_kegiatan')
                             include 'data_kegiatan.php';
+                        elseif ($halaman=='edit_kegiatan')
+                            include 'edit_kegiatan.php';
 
 
                         //CRUD alumni  
@@ -235,8 +240,18 @@
                             include 'edit_info_beasiswa.php';
                         elseif ($halaman=='edit_struktur')
                             include 'edit_struktur.php';
+                        elseif ($halaman=='edit_ip')
+                            include 'edit_ip.php';
                         elseif ($halaman=='tambah_struktur')
                             include 'tambah_struktur.php';
+                        elseif ($halaman=='read_anggota')
+                            include 'read_anggota.php';
+                        elseif ($halaman=='manajemen_user')
+                            include 'manajemen_user.php';
+                        elseif ($halaman=='input_event')
+                            include 'input_event.php';
+                        elseif ($halaman=='input_modul')
+                            include 'input_modul.php';
                                        
                      ?>
                     </div>

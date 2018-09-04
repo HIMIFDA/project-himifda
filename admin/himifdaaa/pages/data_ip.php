@@ -44,7 +44,7 @@
       <a href="index.php?halaman=data_ip"><button type="button" class="btn btn-warning"><i class="fa fa-refresh fa-fw"></i></button></a>
     </div>
   </form>
-  <a href=""><button type="button" class="btn btn-primary"><i class="fa fa-plus-circle fa-fw"></i>Tambah Indeks Prestasi</button></a>
+  <a href="index.php?halaman=input_ip"><button type="button" class="btn btn-primary"><i class="fa fa-plus-circle fa-fw"></i>Tambah Indeks Prestasi</button></a>
   <br>
   <br>
   <form class="form-horizontal" method="POST">
@@ -114,7 +114,7 @@
 
 
                                                 
-                                                echo '<td><a href=index.php?halaman=edit&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
+                                                echo '<td><a href=index.php?halaman=edit_ip&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
                                                 echo '<td><a href=config/hapus_ip.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';
                                                 echo '</tr>';
                         $no++;  

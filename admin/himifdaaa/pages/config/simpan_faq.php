@@ -20,7 +20,7 @@ $question = $_POST['question'];
 
 
 echo "Data telah berhasil disimpan.";
-echo '<META HTTP-EQUIV="REFRESH" CONTENT ="1; url=../index.php?halaman=input_faq">';
+echo '<META HTTP-EQUIV="REFRESH" CONTENT ="1; url=../index.php?halaman=data_faq">';
 
 ?>
 

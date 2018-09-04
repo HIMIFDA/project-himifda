@@ -110,7 +110,7 @@
 
 
                                                 
-                                                echo '<td><a href=index.php?halaman=edit_kritiksaran&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
+                                               /* echo '<td><a href=index.php?halaman=edit_kritiksaran&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';*/
                                                 echo '<td><a href=config/hapus_kritiksaran.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';
                                                 echo '</tr>';
                         $no++;  

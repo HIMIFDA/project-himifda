@@ -40,10 +40,10 @@
     <div class="form-group" style="float: right;">
       <input size="37px" type="text" name="pencarian" class="form-control" placeholder="Pencarian">
       <button type="submit" class="btn btn-primary"><i class="fa fa-search fa-fw"></i></button>
-      <a href="index.php?halaman=data_anggota"><button type="button" class="btn btn-warning"><i class="fa fa-refresh fa-fw"></i></button></a>
+      <a href="index.php?halaman=data_kegiatan"><button type="button" class="btn btn-warning"><i class="fa fa-refresh fa-fw"></i></button></a>
     </div>
   </form>
-  <a href=""><button type="button" class="btn btn-primary"><i class="fa fa-plus-circle fa-fw"></i>Tambah Events</button></a>
+  <a href="index.php?halaman=input_event"><button type="button" class="btn btn-primary"><i class="fa fa-plus-circle fa-fw"></i>Tambah Events</button></a>
   <br>
   <br>
   <form class="form-horizontal" method="POST">

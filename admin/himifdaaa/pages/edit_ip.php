@@ -134,7 +134,7 @@ $data    = mysqli_fetch_array($hasil);
 
 <div class="form-style-10">
 <h1>Isi datamu!<span>Form ini untuk menginput IP anggota Himifda</span></h1>
-<form  method="post" action="config/simpan_ip.php">
+<form  method="post" action="config/edit_ip.php">
  
   <input type="hidden" name="id"  value="<?php echo $data['id']; ?>">
 
@@ -165,7 +165,7 @@ $data    = mysqli_fetch_array($hasil);
 
 
     <div class="button-section">
-     <input type="submit" value="Submit" />
+     <input type="submit" value="Edit" />
      <!-- <input type="submit" class="btn btn-default" value="Submit"> -->
    <!--   <span class="privacy-policy">
      <input type="checkbox" name="field7">You agree to our Terms and Policy. 
