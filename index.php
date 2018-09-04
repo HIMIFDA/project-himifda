@@ -182,7 +182,7 @@
                         echo '<div class="caption"><b><p align="center">'.$data['nama_kegiatan'].'</p></b></div>';
 
                       ?>
-                      <p><a href="../admin/himifdaaa/images/<?php echo $data['gambar'] ?>" target="_blank"><img src="images/<?php echo $data['gambar'] ?>"></a></p>
+                      <p><a href="admin/himifdaaa/pages/files/<?php echo $data['gambar'] ?>" target="_blank"><img width='100%' src="admin/himifdaaa/pages/files/<?php echo $data['gambar'] ?>"></a></p>
                       <?php  
                         echo '<hr>';
                         echo '<div class="caption"><p>'.$data['deskripsi'].'</p></div>';
@@ -191,6 +191,7 @@
             <div class="card-footer">
               <a href="pages/pages.php?halaman=read_more&&id='.$data['id'].'" class="btn btn-primary">Read More</a>
             </div>
+          </div>
           </div>
         </div>';
                         $no++;  
@@ -264,16 +265,16 @@
             <button type="button" class="btn btn-primary"><a href="https://www.facebook.com/himifda.unsada/"><font color="white">Facebook</font></a></button>
             <button type="button" class="btn btn-warning"><a href="https://www.instagram.com/himifda/?hl=id"><font color="white">Instagram</font></a></button>
             <button type="button" class="btn btn-info"><a href="https://twitter.com/himifda08"><font color="white">Twitter</font></a></button><br><br>
-            <button type="button" class="btn btn-success"><a href=""><font color="white">Line: @uuw2562z</font></a></button>
+            <button type="button" class="btn btn-success"><font color="white">Line: @uuw2562z</font></button>
             <button type="button" class="btn btn-danger"><a href="https://www.youtube.com/channel/UCfaMHmPmMF0HHsbqsWJdH7Q"><font color="white">Youtube</font></a></button><br><br>
              <button type="button" class="btn btn-default">Email : himifda08@gmail.com</button>
 
           </div>
           <div class="col m4 s12">
             <h5 class="white-text"><font color="white"><b>Contact HIMIFDA</b></font></h5>
-              <a class="grey-text text-lighten-3"><font color="white">Nadia Salsabil&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 087876024094</font></a></br>
-              <a class="grey-text text-lighten-3"><font color="white">Erma Noviana&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 083893936774</font></a></br>
-                <a class="grey-text text-lighten-3"> <font color="white">Riki Bagastoro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 081219845389</font></a></br>
+              <a class="grey-text text-lighten-3"><font color="white">Nadia Salsabil&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 0878-7602-4094</font></a></br>
+              <a class="grey-text text-lighten-3"><font color="white">Erma Noviana&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 0838-9393-6774</font></a></br>
+                <a class="grey-text text-lighten-3"> <font color="white">Riki Bagastoro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 0812-1984-5389</font></a></br>
           </div>
 
 
