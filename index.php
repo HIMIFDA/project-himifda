@@ -158,7 +158,8 @@
             </div>
           </div>
         </div> -->
-       
+       <div class="row">
+         
         <?php
 
             include 'config/koneksi.php';
@@ -173,7 +174,7 @@
                     { 
                       $no = 1;        
                       while($data = mysqli_fetch_array($query)){  
-                        echo '<div class="row">
+                        echo '
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
             <h4 class="card-header"></h4>
@@ -191,13 +192,13 @@
             <div class="card-footer">
               <a href="pages/pages.php?halaman=read_more&&id='.$data['id'].'" class="btn btn-primary">Read More</a>
             </div>
-          </div>
-        </div>';
+          </div>';
                         $no++;  
                       }
                     }
               
                 ?>
+       </div>
  
 
 
