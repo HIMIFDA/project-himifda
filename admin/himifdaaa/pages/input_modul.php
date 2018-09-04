@@ -124,24 +124,19 @@
 
 <div class="form-style-10">
 <h1>Isi data!<span>Form ini untuk menginput modul.</span></h1>
-<form  method="post" action="config/simpan_modul.php">
+<form  method="post" action="config/simpan_modul.php" enctype="multipart/form-data">
  
   <input type="hidden" name="id">
 
     <div class="section"><span>1</span>Modul</div>
     <div class="inner-wrap">
-        <label>Semester<input type="text" name="Semester" /></label>
-        <label>Mata Kuliah<input type="text" name="Mata_Kuliah" /></label>
-        <label>Judul Materi<input type="text" name="Judul_Materi" /></label>
+        <label>Semester<input type="text" name="semester" /></label>
+        <label>Mata Kuliah<input type="text" name="matkul" /></label>
+        <label>Judul Materi<input type="text" name="judul_materi" /></label>
         <label>File<input type="file" name="fileToUpload" id="fileToUpload"></label>
-
     </div>
     <div class="button-section">
      <input type="submit" value="Submit" />
-     <!-- <input type="submit" class="btn btn-default" value="Submit"> -->
-   <!--   <span class="privacy-policy">
-     <input type="checkbox" name="field7">You agree to our Terms and Policy. 
-     </span> -->
     </div>
 </form>
 </div>
