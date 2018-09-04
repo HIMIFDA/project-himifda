@@ -258,7 +258,7 @@
 
       <div class="col m4 s12">
             <h5 class="white-text"><font color="white">HIMIFDA</font></h5>
-            <p ><font color="white">4th Floor of Engineering Faculty Building<br>Raden Inten's Street', RT.8 / RW.6, Pd. Klp., Duren Sawit, East Jakarta City, Jakarta Capital City 13450</font></p>
+            <p ><font color="white">4th Floor of Engineering Faculty Building<br>Raden Inten Street', RT.8 / RW.6, Pd. Klp., Duren Sawit, East Jakarta City, Jakarta Capital City 13450</font></p>
           </div>
  <div class="col m4 s12">
             <h5 class="white-text"><b><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Media Social</font></b></h5>
