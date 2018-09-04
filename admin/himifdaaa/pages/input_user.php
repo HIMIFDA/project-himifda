@@ -1,14 +1,3 @@
- <?php
-
-include 'config/koneksi.php';
- 
-$id  = $_GET['id'];
-
-$edit    = "SELECT id, beasiswa, info_beasiswa,tgl,penyelenggara,file,deskripsi  FROM info_beasiswa WHERE id = '$id'";
-$hasil   = mysqli_query($connect, $edit)or die(mysql_error());
-$data    = mysqli_fetch_array($hasil);
-?>
-
 <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 <style type="text/css">
 .form-style-10{
@@ -134,41 +123,24 @@ $data    = mysqli_fetch_array($hasil);
 
 
 <div class="form-style-10">
-<h1>Info Beasiswa<span></span></h1>
-<form  method="post" action="config/edit_info_beasiswa.php">
+<h1>Isi data user baru!<span>Form ini untuk menginput data user baru.</span></h1>
+<form  method="post" action="config/simpan_user.php">
  
-  <input type="hidden" name="id"  value="<?php echo $data['id']; ?>">
+  <input type="hidden" name="id">
 
-    <div class="section"><span>1</span>Info Beasiswa</div>
+    <div class="section"><span>1</span>Data User</div>
     <div class="inner-wrap">
-        <label>Beasiswa<input type="text" name="beasiswa"  value="<?php echo $data['beasiswa']; ?>"/></label>
-        <label>Info Beasiswa<input type="text" name="info_beasiswa"  value="<?php echo $data['info_beasiswa']; ?>"/></label>
-        <label>Tanggal<input type="date" name="tgl"  value="<?php echo $data['tgl']; ?>"/></label>
-        <label>Penyelenggara<input type="text" name="penyelenggara"  value="<?php echo $data['penyelenggara']; ?>"/></label>
-        <label>Deskripsi<input type="text" name="deskripsi"  value="<?php echo $data['deskripsi']; ?>"/></label>
-        <!-- <label>Alamat <textarea name="alamat"></textarea></label>
-        <label>Tempat Lahir <input type="text" name="tempat_lahir" /></label>
-        <label>Tanggal Lahir <input type="date" name="tgl_lahir" /></label>
-        <label>Jenis Kelamin <input type="text" name="jk" /></label>
-        <label>Agama <input type="text" name="agama" /></label> -->
+        <label>Nama<input type="text" name="nama" required></label>
+        <label>Username <input type="text" name="username" required/></label>
+        <label>Password <input type="text" name="password" required/></label>
 
     </div>
 
    
 
-<!-- <div class="section"><span>3</span>IP</div>
- <div class="inner-wrap">
-        <label>IPS <input type="text" name="ips" /></label>
-        <label>IPK <input type="text" name="ipk" /></label>
-    </div>
- -->
 
     <div class="button-section">
-     <input type="submit" value="Edit" />
-     <!-- <input type="submit" class="btn btn-default" value="Submit"> -->
-   <!--   <span class="privacy-policy">
-     <input type="checkbox" name="field7">You agree to our Terms and Policy. 
-     </span> -->
+     <input type="submit" value="Submit" />
     </div>
 </form>
 </div>

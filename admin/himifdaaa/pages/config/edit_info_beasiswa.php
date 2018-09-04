@@ -7,13 +7,12 @@ $beasiswa = $_POST['beasiswa']; // Ambil data nama dan masukkan ke variabel nama
 $info_beasiswa = $_POST['info_beasiswa'];
 $tgl = $_POST['tgl'];
 $penyelenggara = $_POST['penyelenggara'];
-$file = $_POST['file'];
 $deskripsi = $_POST['deskripsi'];
 
 
 // query SQL untuk insert data
 
-$edit = mysqli_query($connect,"UPDATE info_beasiswa SET id='$id', beasiswa='$beasiswa', info_beasiswa='$info_beasiswa', tgl='$tgl', penyelenggara='$penyelenggara', file='$file', deskripsi='$deskripsi' WHERE id='$id'");
+$edit = mysqli_query($connect,"UPDATE info_beasiswa SET id='$id', beasiswa='$beasiswa', info_beasiswa='$info_beasiswa', tgl='$tgl', penyelenggara='$penyelenggara', deskripsi='$deskripsi' WHERE id='$id'");
 
 echo "Data telah berhasil diedit.";
 echo '<META HTTP-EQUIV="REFRESH" CONTENT ="1; url=../index.php?halaman=data_info_beasiswa">';			

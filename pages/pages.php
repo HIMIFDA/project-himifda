@@ -154,6 +154,8 @@
               include 'berita5.php';
              if ($halaman=='berita6')
               include 'berita6.php';
+            if ($halaman=='read_more')
+              include 'read_more.php';
     ?>
 
     

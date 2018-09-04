@@ -44,7 +44,7 @@
       <a href="index.php?halaman=data_info_beasiswa"><button type="button" class="btn btn-warning"><i class="fa fa-refresh fa-fw"></i></button></a>
     </div>
   </form>
-  <a href=""><button type="button" class="btn btn-primary"><i class="fa fa-plus-circle fa-fw"></i>Tambah Info Beasiswa</button></a>
+  <a href="index.php?halaman=input_beasiswa"><button type="button" class="btn btn-primary"><i class="fa fa-plus-circle fa-fw"></i>Tambah Info Beasiswa</button></a>
   <br>
   <br>
   <form class="form-horizontal" method="POST">
@@ -114,7 +114,7 @@
                                                
                                                 
                                                 echo '<td><a href=index.php?halaman=edit_info_beasiswa&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
-                                                echo '<td><a href=config/_info_beasiswa_b.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';
+                                                echo '<td><a href=config/hapus_beasiswa.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';
                                                 echo '</tr>';
                         $no++;  
                       }

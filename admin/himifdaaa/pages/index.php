@@ -252,6 +252,14 @@
                             include 'input_event.php';
                         elseif ($halaman=='input_modul')
                             include 'input_modul.php';
+                        elseif ($halaman=='input_beasiswa')
+                            include 'input_beasiswa.php';
+                        elseif ($halaman=='input_user')
+                            include 'input_user.php';
+                        elseif ($halaman=='edit_user')
+                            include 'edit_user.php';
+                        elseif ($halaman=='edit_modul')
+                            include 'edit_modul.php';
                                        
                      ?>
                     </div>

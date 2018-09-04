@@ -126,7 +126,7 @@
 
       <!-- Marketing Icons Section -->
       <hr>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
             <h4 class="card-header"></h4>
@@ -157,74 +157,47 @@
               <a href="pages/pages.php?halaman=berita1" class="btn btn-primary">Read More</a>
             </div>
           </div>
-        </div>
+        </div> -->
+       
+        <?php
+
+            include 'config/koneksi.php';
+
+            $query = mysqli_query($konek, "SELECT * FROM kegiatan ORDER BY id DESC LIMIT 3")or die(mysqli_error());
+                    if(mysqli_num_rows($query) == 0){ 
+                      echo '<center><i>';
+                      echo 'Belum ada post!';
+                      echo '</i></center>';    
+                    }
+                      else
+                    { 
+                      $no = 1;        
+                      while($data = mysqli_fetch_array($query)){  
+                        echo '<div class="row">
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
             <h4 class="card-header"></h4>
             <div class="card-body">
-              <p class="card-text">
-                
-                 <?php
+              <p class="card-text">';
+                        echo '<div class="caption"><b><p align="center">'.$data['nama_kegiatan'].'</p></b></div>';
 
-            include 'config/koneksi.php';
-           $query = mysqli_query($konek, "SELECT id,kode_berita,judul,foto,read_more FROM berita where kode_berita='berita 2'")or die(mysqli_error($konek));
-
-            $no = 1;        
-                      while($data = mysqli_fetch_array($query)){  
-        
-        
-           
-          
-         
-            echo ' <img src='.$data['foto'].' alt="Lights" style="width:100%">';
-           echo '<h5><b>'.$data['judul'].'</h5></b>';
-           echo ''.$data['read_more'].'<br><br>';
-          
-          
-           
-}
-        ?>
-              </p>
-            </div>
+                      ?>
+                      <p><a href="../admin/himifdaaa/images/<?php echo $data['gambar'] ?>" target="_blank"><img src="images/<?php echo $data['gambar'] ?>"></a></p>
+                      <?php  
+                        echo '<hr>';
+                        echo '<div class="caption"><p>'.$data['deskripsi'].'</p></div>';
+                       
+                        echo '</div>
             <div class="card-footer">
-              <a href="pages/pages.php?halaman=berita2" class="btn btn-primary">Read More</a>
+              <a href="pages/pages.php?halaman=read_more&&id='.$data['id'].'" class="btn btn-primary">Read More</a>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-            <h4 class="card-header"></h4>
-            <div class="card-body">
-              <p class="card-text">
-                 <?php
-
-            include 'config/koneksi.php';
-           $query = mysqli_query($konek, "SELECT id,kode_berita,judul,foto,read_more FROM berita where kode_berita='berita 3'")or die(mysqli_error($konek));
-
-            $no = 1;        
-                      while($data = mysqli_fetch_array($query)){  
-        
-        
-           
-          
-         
-            echo ' <img src='.$data['foto'].' alt="Lights" style="width:100%">';
-           echo '<h5><b>'.$data['judul'].'</h5></b>';
-           echo ''.$data['read_more'].'<br><br>';
-          
-          
-           
-}
-        ?>
-              </p>
-            </div>
-            <div class="card-footer">
-              <a href="pages/pages.php?halaman=berita3" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
+        </div>';
+                        $no++;  
+                      }
+                    }
+              
+                ?>
  
 
 

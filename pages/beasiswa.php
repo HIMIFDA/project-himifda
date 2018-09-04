@@ -19,14 +19,17 @@
   $no = 1;        
                       while($data = mysqli_fetch_array($query)){  
         
-         echo ''.$data['tgl'].'<br>';
-         echo ' penyelenggara :&nbsp;'.$data['penyelenggara'].'<br>';
+         
+         echo ' Penyelenggara :&nbsp;'.$data['penyelenggara'].'<br>';
           
           echo '<b><h3>'.$data['info_beasiswa'].'</b></h3>'; 
-          echo '<img height="150" width="100" src ='.$data['file'].'<br>';
-           echo '<p align="justify">'.$data['deskripsi'].'</p><hr>';
+          ?>
+
+           <p><img width="120" height="160" src="../admin/himifdaaa/images/iamges/<?php echo $data['file'] ?>"></a></p>
+           <p align="justify"><?php echo $data['deskripsi'] ?></p>
+          <?php
           
-          
+          echo '<p align="right"><i>'.$data['tgl'].'</i></p><hr>';
            
 }
         ?>

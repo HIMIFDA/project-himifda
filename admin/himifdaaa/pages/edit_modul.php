@@ -144,12 +144,7 @@ $data    = mysqli_fetch_array($hasil);
         <label>Semester<input type="text" name="Semester"  value="<?php echo $data['Semester']; ?>"/></label>
         <label>Mata Kuliah<input type="text" name="Mata_Kuliah"  value="<?php echo $data['Mata_Kuliah']; ?>"/></label>
         <label>Judul Materi<input type="text" name="Judul_Materi"  value="<?php echo $data['Judul_Materi']; ?>"/></label>
-        <label>File<input type="file" name="file"  value="<?php echo $data['file']; ?>"/></label>
-        <!-- <label>Alamat <textarea name="alamat"></textarea></label>
-        <label>Tempat Lahir <input type="text" name="tempat_lahir" /></label>
-        <label>Tanggal Lahir <input type="date" name="tgl_lahir" /></label>
-        <label>Jenis Kelamin <input type="text" name="jk" /></label>
-        <label>Agama <input type="text" name="agama" /></label> -->
+       
 
     </div>
 
