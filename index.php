@@ -158,7 +158,7 @@
             </div>
           </div>
         </div> -->
-       <div class="row">
+       
         <?php
 
             include 'config/koneksi.php';
@@ -173,25 +173,26 @@
                     { 
                       $no = 1;        
                       while($data = mysqli_fetch_array($query)){  
-                        echo '
-                            <div class="col-lg-4 mb-4">
-                              <div class="card h-100">
-                                <h4 class="card-header"></h4>
-                                <div class="card-body">
-                                  <p class="card-text">';
-                                            echo '<div class="caption"><b><p align="center">'.$data['nama_kegiatan'].'</p></b></div>';
+                        echo '<div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header"></h4>
+            <div class="card-body">
+              <p class="card-text">';
+                        echo '<div class="caption"><b><p align="center">'.$data['nama_kegiatan'].'</p></b></div>';
 
-                                          ?>
-                                          <p><a href="admin/himifdaaa/pages/files/<?php echo $data['gambar'] ?>" target="_blank"><img src="images/<?php echo $data['gambar'] ?>"></a></p>
-                                          <?php  
-                                            echo '<hr>';
-                                            echo '<div class="caption"><p>'.$data['deskripsi'].'</p></div>';
-                                           
-                                            echo '</div>
-                                <div class="card-footer">
-                                  <a href="pages/pages.php?halaman=read_more&&id='.$data['id'].'" class="btn btn-primary">Read More</a>
-                                </div>
-                              </div>';
+                      ?>
+                      <p><a href="admin/himifdaaa/pages/files/<?php echo $data['gambar'] ?>" target="_blank"><img src="images/<?php echo $data['gambar'] ?>"></a></p>
+                      <?php  
+                        echo '<hr>';
+                        echo '<div class="caption"><p>'.$data['deskripsi'].'</p></div>';
+                       
+                        echo '</div>
+            <div class="card-footer">
+              <a href="pages/pages.php?halaman=read_more&&id='.$data['id'].'" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>';
                         $no++;  
                       }
                     }
@@ -200,7 +201,7 @@
  
 
 
-                </div>
+
         </div>
         
       </div> 

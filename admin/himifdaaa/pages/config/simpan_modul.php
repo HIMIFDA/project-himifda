@@ -47,7 +47,7 @@
     $updaterespon   = mysqli_query($connect, $input)or die(mysqli_error($connect));
     if ($updaterespon)
         {
-            echo "<strong><center>Materi atau Soal Anda Berhasil Diuploads</center></strong>";
+            echo "<br><br><br><br><strong><center><i>Modul berhasil ditambah!</i></center></strong>";
             echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../index.php?halaman=data_modul">';
         }
     else {
