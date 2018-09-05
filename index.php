@@ -86,7 +86,7 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('images/log.png')">
+          <div class="carousel-item active" style="background-image: url('images/lop.png')">
             <div class="carousel-caption d-none d-md-block">
             </div>
           </div>
@@ -137,14 +137,14 @@
                       while($data = mysqli_fetch_array($query)){  
                         echo '<div class="col-md-4">';
 
-                        echo ' <div class="card h-100">';
+                        echo ' <div class="card h-100"><br>';
                         echo '<div class="caption"><b><p align="center">'.$data['nama_kegiatan'].'</p></b></div>';
 
                       ?>
                       <p><a href="admin/himifdaaa/pages/files/<?php echo $data['gambar'] ?>" target="_blank"><img width="100%" src="admin/himifdaaa/pages/files/<?php echo $data['gambar'] ?>"></a></p>
                       <?php  
                         echo '<hr>';
-                        echo '<div class="caption"><p>&nbsp;&nbsp;&nbsp;'.$data['deskripsi'].'</p></div>';
+                        echo '<div class="caption"><p align="center">'.$data['deskripsi'].'</p></div>';
                        
                         echo '
                         <div class="card-footer">
