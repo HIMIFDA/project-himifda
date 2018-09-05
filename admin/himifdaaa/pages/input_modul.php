@@ -124,7 +124,7 @@
 
 <div class="form-style-10">
 <h1>Isi data!<span>Form ini untuk menginput modul.</span></h1>
-<form  method="post" action="config/simpan_modul.php" enctype="multipart/form-data">
+<form  method="post" action="../../../config/simpan_modul.php" enctype="multipart/form-data">
  
   <input type="hidden" name="id">
 

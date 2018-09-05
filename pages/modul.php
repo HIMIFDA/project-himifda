@@ -53,8 +53,8 @@
  <form class="form-inline" action="" method="POST">
     <div class="form-group" style="float: right;">
       <input size="120px" type="text" name="pencarian" class="form-control" placeholder="Pencarian">
-      &nbsp;&nbsp;<button type="submit" class="btn btn-primary">Search</button>
-      <a href="pages.php?halaman=modul">&nbsp;&nbsp;<button type="button" class="btn btn-warning">Refresh</button></a>
+      &nbsp;&nbsp;<button type="submit" class="btn btn-primary">Search</button>&nbsp;&nbsp;
+      <a href="pages.php?halaman=modul"><button type="button" class="btn btn-warning">Refresh</button></a>
     </div>
   </form><br>
   <form class="form-horizontal" method="POST">

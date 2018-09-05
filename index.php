@@ -121,43 +121,6 @@
     <!-- Page Content -->
     <div class="container"><br>
        
-   
-     <!--  <h3 class="my-4"><center><b>Himpunan Mahasiswa Informatika Universitas Darma Persada</b></center></h3><hr /> -->
-
-      <!-- Marketing Icons Section -->
-      <hr>
-      <!-- <div class="row">
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-            <h4 class="card-header"></h4>
-            <div class="card-body">
-              <p class="card-text">
-               <?php
-
-            include 'config/koneksi.php';
-           $query = mysqli_query($konek, "SELECT id,kode_berita,judul,foto,read_more FROM berita where kode_berita='berita 1'")or die(mysqli_error($konek));
-
-            $no = 1;        
-                      while($data = mysqli_fetch_array($query)){  
-        
-        
-           
-          
-         
-            echo ' <img src='.$data['foto'].' alt="Lights" style="width:100%">';
-           echo '<h5><b>'.$data['judul'].'</h5></b>';
-           echo ''.$data['read_more'].'<br><br>';
-          
-          
-           
-}
-        ?> </p>
-            </div>
-            <div class="card-footer">
-              <a href="pages/pages.php?halaman=berita1" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div> -->
        <div class="row">
          
         <?php
@@ -166,33 +129,30 @@
 
             $query = mysqli_query($konek, "SELECT * FROM kegiatan ORDER BY id DESC LIMIT 3")or die(mysqli_error());
                     if(mysqli_num_rows($query) == 0){ 
-                      echo '<center><i>';
-                      echo 'Belum ada post!';
-                      echo '</i></center>';    
+                      echo '<center><i><marquee>Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || </marquee></i></center>'; 
                     }
                       else
                     { 
                       $no = 1;        
                       while($data = mysqli_fetch_array($query)){  
-                        echo '
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-            <h4 class="card-header"></h4>
-            <div class="card-body">
-              <p class="card-text">';
+                        echo '<div class="col-md-4">';
+
+                        echo ' <div class="card h-100">';
                         echo '<div class="caption"><b><p align="center">'.$data['nama_kegiatan'].'</p></b></div>';
 
                       ?>
-                      <p><a href="admin/himifdaaa/pages/files/<?php echo $data['gambar'] ?>" target="_blank"><img src="images/<?php echo $data['gambar'] ?>"></a></p>
+                      <p><a href="admin/himifdaaa/pages/files/<?php echo $data['gambar'] ?>" target="_blank"><img width="100%" src="admin/himifdaaa/pages/files/<?php echo $data['gambar'] ?>"></a></p>
                       <?php  
                         echo '<hr>';
-                        echo '<div class="caption"><p>'.$data['deskripsi'].'</p></div>';
+                        echo '<div class="caption"><p>&nbsp;&nbsp;&nbsp;'.$data['deskripsi'].'</p></div>';
                        
-                        echo '</div>
-            <div class="card-footer">
-              <a href="pages/pages.php?halaman=read_more&&id='.$data['id'].'" class="btn btn-primary">Read More</a>
-            </div>
-          </div>';
+                        echo '
+                        <div class="card-footer">
+                          <a href="pages/pages.php?halaman=read_more&&id='.$data['id'].'" class="btn btn-primary">Read More</a>
+                        </div>
+                      ';
+                       echo '</div>';
+                        echo '</div>';
                         $no++;  
                       }
                     }
@@ -200,7 +160,6 @@
                 ?>
        </div>
  
-
 
 
         </div>
@@ -245,23 +204,14 @@
 
     </div>
 
-    <!-- /.container -->
-
-    <!-- Footer -->
     <footer class="py-5" style="background-color: #003366;"><br><br>
        
       <div class="container">
           <div class="row">
 
-       
-     
-
-      <div class="col m4 s12">
-            <h5 class="white-text"><font color="white">HIMIFDA</font></h5>
-            <p ><font color="white">4th Floor of Engineering Faculty Building<br>Raden Inten Street', RT.8 / RW.6, Pd. Klp., Duren Sawit, East Jakarta City, Jakarta Capital City 13450</font></p>
-          </div>
+   
  <div class="col m4 s12">
-            <h5 class="white-text"><b><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Media Social</font></b></h5>
+            <h5 class="white-text"><b><font color="white">MEDIA SOCIAL</font></b></h5><hr>
             <button type="button" class="btn btn-primary"><a href="https://www.facebook.com/himifda.unsada/"><font color="white">Facebook</font></a></button>
             <button type="button" class="btn btn-warning"><a href="https://www.instagram.com/himifda/?hl=id"><font color="white">Instagram</font></a></button>
             <button type="button" class="btn btn-info"><a href="https://twitter.com/himifda08"><font color="white">Twitter</font></a></button><br><br>
@@ -270,11 +220,13 @@
              <button type="button" class="btn btn-default">Email : himifda08@gmail.com</button>
 
           </div>
+             <div class="col m4 s12">
+            <h5 class="white-text"><font color="white">HIMIFDA OFFICE</font></h5><hr>
+            <p ><font color="white">4th Floor of Engineering Faculty Building<br>Raden Inten Street', RT.8 / RW.6, Pd. Klp., Duren Sawit, East Jakarta City, Jakarta Capital City 13450</font></p>
+          </div>
           <div class="col m4 s12">
-            <h5 class="white-text"><font color="white"><b>Contact HIMIFDA</b></font></h5>
-              <a class="grey-text text-lighten-3"><font color="white">Nadia Salsabil&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 087876024094</font></a></br>
-              <a class="grey-text text-lighten-3"><font color="white">Erma Noviana&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 083893936774</font></a></br>
-                <a class="grey-text text-lighten-3"> <font color="white">Riki Bagastoro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 081219845389</font></a></br>
+            <h5 align="justify" class="white-text"><font size="5" color="white"><b>Hello, you can contact us by media social beside this text! You also can add some suggest or critics by fill the form below this text. Thank you!</b></font></h5>
+              <a class="grey-text text-lighten-3"><font color="white"></font></a>
           </div>
 
 
@@ -284,23 +236,24 @@
           <div class="card">
  
   <div class="card-body">
-    
+
+    <p align="center"><b>HERE YOU CAN GIVE A SUGGESTION OR CRITIC FOR INFORMATICS ENGINEERING OF DARMA PERSADA UNIVERSITY.</b></p><hr>
       <form action="config/simpan-kritiksaran.php" method="post">
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" placeholder="Enter email" name="email" required>
+      <input type="email" class="form-control" placeholder="Enter your email" name="email" required>
     </div>
 
     
 
    <div class="form-group">
   <label for="comment">Critics:</label>
-  <textarea class="form-control" rows="2" name="kritik" placeholder="Enter Critics" required></textarea>
+  <textarea class="form-control" rows="2" name="kritik" placeholder="Enter your critics" required></textarea>
 </div>
 
    <div class="form-group">
   <label for="comment">Suggestion:</label>
-  <textarea class="form-control" rows="2" name="saran" placeholder="Enter Suggestion" required></textarea>
+  <textarea class="form-control" rows="2" name="saran" placeholder="Enter your suggestion" required></textarea>
 </div>  
    
     <button type="submit" class="btn btn-primary">Submit</button>

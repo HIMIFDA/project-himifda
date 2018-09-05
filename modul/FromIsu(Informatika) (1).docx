@@ -1,0 +1,8 @@
+<br />
+<b>Notice</b>:  Undefined variable: direktori in <b>C:\xampp\htdocs\project-himifda\config\download.php</b> on line <b>6</b><br />
+<br />
+<b>Notice</b>:  Undefined variable: direktori in <b>C:\xampp\htdocs\project-himifda\config\download.php</b> on line <b>36</b><br />
+<br />
+<b>Notice</b>:  Undefined variable: direktori in <b>C:\xampp\htdocs\project-himifda\config\download.php</b> on line <b>37</b><br />
+<br />
+<b>Warning</b>:  readfile(,C:\xampp\htdocs\project-himifda\modul\FromIsu(Informatika).docx): failed to open stream: No such file or directory in <b>C:\xampp\htdocs\project-himifda\config\download.php</b> on line <b>37</b><br />

@@ -44,11 +44,11 @@
 
 
  $input="INSERT INTO modul(id,Semester,Mata_Kuliah,Judul_Materi,file)values('','$semester','$matkul','$judul_materi','$target_file')";
-    $updaterespon   = mysqli_query($connect, $input)or die(mysqli_error($connect));
+    $updaterespon   = mysqli_query($konek, $input)or die(mysqli_error($konek));
     if ($updaterespon)
         {
-            echo "<br><br><br><br><strong><center><i>Modul berhasil ditambah!</i></center></strong>";
-            echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../index.php?halaman=data_modul">';
+            echo "<br><br><br><br><br><strong><center><i>Modul berhasil ditambah!</i></center></strong>";
+            echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../admin/himifdaaa/pages/index.php?halaman=data_modul">';
         }
     else {
 
