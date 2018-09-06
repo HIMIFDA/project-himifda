@@ -2,8 +2,12 @@
     
     session_start();
 
-    if(isset($_GET['halaman'])) $halaman = $_GET['halaman']; 
-        else $halaman = "index";
+    if (!isset($_SESSION['username'])){
+        header('location:../index.php');
+    }
+    else{
+        if(isset($_GET['halaman'])) $halaman = $_GET['halaman']; 
+            else $halaman = "index";
 
 ?>
 <!DOCTYPE html>
@@ -521,3 +525,6 @@
 </body>
 
 </html>
+<?php
+}
+?>
