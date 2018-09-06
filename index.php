@@ -91,7 +91,7 @@
             </div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('images/2.jpg')">
+          <div class="carousel-item" style="background-image: url('images/satu.jpeg')">
             <div class="carousel-caption d-none d-md-block">
               <h3> HIMIFDA </h3>
            
@@ -99,7 +99,7 @@
             </div>
           </div>
           <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('images/1.jpg')">
+          <div class="carousel-item" style="background-image: url('images/dua.jpeg')">
             <div class="carousel-caption d-none d-md-block">
               <h3> HIMIFDA </h3>
             
