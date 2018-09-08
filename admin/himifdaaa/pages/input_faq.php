@@ -1,3 +1,16 @@
+<?php
+error_reporting(0);
+ session_start();
+
+    if (isset($_SESSION['username']))
+        
+    {
+
+?>
+
+
+
+
 <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 <style type="text/css">
 .form-style-10{
@@ -158,3 +171,11 @@
     </div>
 </form>
 </div>
+
+<?php
+}
+else
+  {
+    header("location:../../index.php");
+  }
+?>

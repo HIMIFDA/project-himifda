@@ -1,3 +1,16 @@
+ <?php
+ error_reporting(0);
+
+ session_start();
+
+    if (isset($_SESSION['username']))
+        
+    {
+
+?>
+
+
+
 <?php
 // Baca lokasi file sementar dan nama file dari form (fupload)
 include "config/koneksi.php";
@@ -29,4 +42,13 @@ echo '<META HTTP-EQUIV="REFRESH" CONTENT ="1; url=../index.php?halaman=struktura
 else{
   echo "File gagal di upload";
 }
+?>
+
+
+<?php
+}
+else
+  {
+    header("location:../../index.php");
+  }
 ?>

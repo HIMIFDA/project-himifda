@@ -1,3 +1,27 @@
+
+
+
+
+
+
+
+<?php
+
+error_reporting(0);
+
+ session_start();
+
+    if (isset($_SESSION['username']))
+        
+    {
+
+?>
+
+
+
+
+
+
 <div class="col-md-12" style="padding:0px">
 	<ol class="breadcrumb" style="margin:0;border-radius:0;">
     	<li class="active">Dashboard</li>
@@ -43,3 +67,11 @@
 	<br>
 	<br>
 </div>
+
+<?php
+}
+else
+  {
+    header("location:../../index.php");
+  }
+?>

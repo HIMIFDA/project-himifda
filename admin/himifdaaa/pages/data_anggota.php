@@ -1,3 +1,15 @@
+<?php
+error_reporting(0);
+ session_start();
+
+    if (isset($_SESSION['username']))
+        
+    {
+
+?>
+
+
+
 <style>
   
   table {
@@ -156,3 +168,11 @@
     </div>
   </div>
 </div>
+
+<?php
+}
+else
+  {
+    header("location:../../index.php");
+  }
+?>

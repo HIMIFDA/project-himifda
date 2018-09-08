@@ -1,3 +1,15 @@
+
+<?php
+error_reporting(0);
+ session_start();
+
+    if (isset($_SESSION['username']))
+        
+    {
+
+?>
+
+
 <html>
 <title>Aplikasi Download</title>
 <body>
@@ -11,5 +23,13 @@
     echo "Nama File : <b>$r[nama_file]</b> <br>";
     echo "Deskripsi : $r[deskripsi] <br>";
     echo "<a href=\"simpan.php?file=$r[nama_file]\">Download File</a><hr><br>";
+  }
+?>
+
+<?php
+}
+else
+  {
+    header("location:../../index.php");
   }
 ?>

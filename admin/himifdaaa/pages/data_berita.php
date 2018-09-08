@@ -1,3 +1,16 @@
+<?php
+error_reporting(0);
+ session_start();
+
+    if (isset($_SESSION['username']))
+        
+    {
+
+?>
+
+
+
+
 <div class="alert alert-info">
   <strong>DATA BERITA </strong>&nbsp; Himpunan Informatika Universitas Darma Persada
 </div>
@@ -85,3 +98,10 @@
          <!-- /. PAGE WRAPPER  -->
         </div>
     
+<?php
+}
+else
+  {
+    header("location:../../index.php");
+  }
+?>

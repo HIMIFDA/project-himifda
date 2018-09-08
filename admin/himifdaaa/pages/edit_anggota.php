@@ -1,3 +1,15 @@
+<?php
+error_reporting(0);
+ session_start();
+
+    if (isset($_SESSION['username']))
+        
+    {
+
+?>
+
+
+
  <?php
 
 include 'config/koneksi.php';
@@ -174,3 +186,11 @@ $id  = $_GET['id'];
     </div>
 </form>
 </div>
+
+<?php
+}
+else
+  {
+    header("location:../../index.php");
+  }
+?>

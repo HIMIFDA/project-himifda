@@ -1,4 +1,12 @@
+<?php
+error_reporting(0);
+ session_start();
 
+    if (isset($_SESSION['username']))
+        
+    {
+
+?>
 <style>
 
   table {
@@ -84,3 +92,10 @@
     </form>
   </div>
 
+<?php
+}
+else
+  {
+    header("location:../../index.php");
+  }
+?>

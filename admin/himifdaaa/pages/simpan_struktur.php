@@ -1,3 +1,18 @@
+ <?php
+ error_reporting(0);
+
+ session_start();
+
+    if (isset($_SESSION['username']))
+        
+    {
+
+?>
+
+
+
+
+
 <?php
 
 	error_reporting(0);
@@ -58,4 +73,13 @@
 	echo "<br><br><br><strong><center><i>Anda berhasil menambah struktural!";
 	echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=index.php?halaman=data_struktur">';  
 
+?>
+
+
+<?php
+}
+else
+  {
+    header("location:../../index.php");
+  }
 ?>
