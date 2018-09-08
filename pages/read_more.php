@@ -23,7 +23,7 @@
         <div class="caption">
             <h2 align="center"><b>" <?php echo $data['nama_kegiatan']; ?> "</b></h2>
             <hr>
-            <p align="center"><img src="../admin/himifdaaa/pages/files/<?php echo $data['gambar']; ?>"></p>
+            <p align="center"><img src="../admin/himifdaaa/pages/files/<?php echo $data['gambar']; ?>"  class="img-rounded" alt="Cinque Terre"></p>
             <br>
             <p align="justify"><i><?php echo $data['deskripsi']; ?></i></p>
             <p align="justify"><b><i><?php echo $data['kegiatan']; ?></i></b></p>

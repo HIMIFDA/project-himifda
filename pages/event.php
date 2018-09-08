@@ -13,7 +13,7 @@
 
             include '../config/koneksi.php';
 
-            $query = mysqli_query($konek, "SELECT * FROM kegiatan ORDER BY id DESC LIMIT 3")or die(mysqli_error());
+            $query = mysqli_query($konek, "SELECT * FROM kegiatan ORDER BY id DESC")or die(mysqli_error());
                     if(mysqli_num_rows($query) == 0){ 
                       echo '<center><i><marquee>Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || Welcome to Himpunan Mahasiswa Informatika Universitas Darma Persada (HIMIFDA) Website! || </marquee></i></center>'; 
                     }
